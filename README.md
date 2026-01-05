@@ -33,14 +33,14 @@ z_tilde^t = z_de^t + λ · v_T^t
 Performance improvements over few-shot baselines across different models and tasks:
 
 | Model | TruthfulQA (Avg Δ) | Math-500 (Avg Δ) | AQUA-RAT (Avg Δ) |
-|-------|-------------------|------------------|------------------|
-| Qwen2-0.5B | +X.XX% | +X.XX% | +X.XX% |
-| Qwen2-1.5B | +X.XX% | +X.XX% | +X.XX% |
-| Qwen2-7B | +1.43% | +5.49% | +2.15% |
-| Yi-6B | +X.XX% | +X.XX% | +X.XX% |
-| Llama-2-7B | +X.XX% | +X.XX% | +X.XX% |
-| Llama-3-8B | +1.16% | +2.96% | +2.16% |
-| Gemma-2-9B | +1.54% | +4.22% | +2.80% |
+| :--- | :--- | :--- | :--- |
+| **Qwen2-0.5B** | +1.58% | +0.88% | +4.14% |
+| **Qwen2-1.5B** | +1.20% | +2.44% | +4.53% |
+| **Qwen2-7B** | +1.47% | +2.73% | +2.07% |
+| **Yi-6B** | +2.41% | +1.21% | +2.56% |
+| **Llama-2-7B** | +2.31% | +3.62% | +1.28% |
+| **Llama-3-8B** | +1.41% | +0.98% | +3.44% |
+| **Gemma-2-9B** | +1.22% | +3.22% | +2.56% |
 
 See paper Table 2 for complete results.
 
