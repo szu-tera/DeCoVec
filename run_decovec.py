@@ -1,6 +1,6 @@
 """
-DeCoVec 实验入口脚本（重构版）
-使用模块化架构，代码更简洁、易于扩展
+DeCoVec experiment entry script (refactored)
+Uses a modular architecture for clarity and extensibility
 """
 import os
 import argparse
@@ -9,15 +9,15 @@ from simple_config import get_config, set_config, SimpleConfig
 
 
 def parse_args():
-    """解析命令行参数"""
-    parser = argparse.ArgumentParser(description="运行 DeCoVec 实验（重构版）")
+    """Parse command line arguments."""
+    parser = argparse.ArgumentParser(description="Run DeCoVec experiment (refactored)")
     
-    # 基本参数
+    # Core arguments
     parser.add_argument(
         "--mode",
                         choices=["full", "zero_shot", "random_icl", "icl", "test_scale"],
                         default="full",
-        help="实验模式"
+        help="Experiment mode"
     )
     parser.add_argument(
         "--dataset",
@@ -31,7 +31,7 @@ def parse_args():
             "aqua_rat",
             "aqua_rat_pool_ablation"
         ],
-        help="数据集选择（论文实验数据集）"
+        help="Dataset selection (paper experiments)"
     )
     parser.add_argument(
         "--model",
@@ -41,132 +41,132 @@ def parse_args():
             # Qwen2 family
             "qwen2-0.5b",
             "qwen2-1.5b",
-            "qwen2-7b",        # 论文主要模型
+            "qwen2-7b",        # Primary model in the paper
             # Other models
             "yi-6b",
             "llama2-7b",
             "llama3-8b",
             "gemma2-9b",
         ],
-        help="模型选择（默认使用 simple_config 中的 qwen2-7b）"
+        help="Model selection (default: qwen2-7b from simple_config)"
     )
     
-    # 实验配置
+    # Experiment configuration
     parser.add_argument("--eval_baseline", action="store_true", default=True,
-                        help="是否评估基线（Zero-shot 和 ICL）")
+                        help="Whether to evaluate baselines (zero-shot and ICL)")
     parser.add_argument("--n_shot", type=int, default=None,
-                        help="ICL 示例数量（默认: 生成式任务和news_factor=10, 其他=15）。支持所有模式：random_icl, icl, test_mu")
+                        help="Number of ICL examples (default: generative tasks and news_factor=10, others=15). Supported in random_icl, icl, test_mu")
     parser.add_argument(
         "--example_order",
         type=str,
         default="ordered",
         choices=["ordered", "reverse", "random"],
-        help="ICL 示例排列顺序（ordered=保持相似度顺序，reverse=倒序，random=随机打乱）"
+        help="ICL example order (ordered=similarity order, reverse=reverse order, random=shuffle)"
     )
     parser.add_argument(
         "--example_order_seed",
         type=int,
         default=None,
-        help="示例随机排列的随机种子（仅在 example_order=random 时使用）"
+        help="Random seed for example shuffling (used only when example_order=random)"
     )
     
 
     
-    # 评估配置
+    # Evaluation configuration
     parser.add_argument("--fast_mode", action="store_true",
-                        help="快速模式：只评估前100个样本")
+                        help="Fast mode: evaluate only the first 100 samples")
     parser.add_argument("--max_samples", type=int, default=None,
-                        help="最大评估样本数")
+                        help="Maximum number of evaluation samples")
     parser.add_argument(
         "--calibration_pool_size",
         type=int,
         default=None,
-        help="限制示例池中的校准样本数（默认使用全部）"
+        help="Limit the number of calibration samples in the pool (default uses all)"
     )
     parser.add_argument(
         "--calibration_pool_seed",
         type=int,
         default=None,
-        help="截断示例池前的随机种子（默认不打乱）"
+        help="Random seed before truncating the pool (default: no shuffle)"
     )
     
     parser.add_argument(
         "--icl_methods",
         type=str,
         default="kate",
-        help="SVD/μ测试使用的 ICL 示例策略（逗号分隔，支持 kate,random_icl,bm25,mapping_error,topk）"
+        help="ICL strategy for SVD/mu tests (comma separated: kate,random_icl,bm25,mapping_error,topk)"
     )
     parser.add_argument(
         "--vector_icl_method",
         type=str,
         default=None,
-        help="用于构造任务向量的 ICL 示例选择策略（默认等于 icl_methods 的第一个值）。与 steer_icl_method 解耦，允许使用不同的 ICL 方法构造向量和进行推理"
+        help="ICL strategy for building task vectors (default: first value of icl_methods). Decoupled from steer_icl_method to use different methods for vector building and inference"
     )
     parser.add_argument(
         "--baseline_icl_method",
         type=str,
         default=None,
-        help="用于计算 δz 的 baseline prompt 的 ICL 方法（默认 None 表示使用 zero-shot，可选 kate,random_icl,bm25,mapping_error,topk）。与 vector_icl_method 配合使用，允许使用不同的 baseline 和 ICL 方法计算 delta_z"
+        help="ICL method for the baseline prompt when computing delta_z (default None uses zero-shot; options: kate,random_icl,bm25,mapping_error,topk). Works with vector_icl_method to decouple baseline and ICL for delta_z"
     )
     
-    # λ 值测试
+    # Lambda sweep configuration
     parser.add_argument(
         "--lambda_values",
         type=str,
         default=None,
-        help="要测试的 λ 值（逗号分隔，例如: 0.5,1.0,1.5,2.0）"
+        help="Lambda values to test (comma separated, e.g., 0.5,1.0,1.5,2.0)"
     )
     
-    # 评估配置
+    # Generation configuration
     parser.add_argument(
         "--temperature",
         type=float,
         default=None,
-        help="生成温度（用于生成式任务，默认使用 config.py 中的配置）"
+        help="Generation temperature (for generative tasks; default from config.py)"
     )
     
-    # 输出保存配置
+    # Output saving configuration
     parser.add_argument(
         "--save_outputs",
         action="store_true",
-        help="保存生成式数据集的模型输出结果到 CSV 文件"
+        help="Save model outputs for generative datasets to CSV"
     )
     parser.add_argument(
         "--output_dir",
         type=str,
         default="results/case",
-        help="输出文件保存目录（默认: results/case）"
+        help="Output directory (default: results/case)"
     )
     
-    # Self-Consistency 配置
+    # Self-consistency configuration
     parser.add_argument(
         "--self_consistency",
         action="store_true",
-        help="启用 Self-Consistency 模式（使用 temperature=0.7 采样，保存 JSON 格式结果）"
+        help="Enable self-consistency mode (samples with temperature=0.7 and saves JSON results)"
     )
     parser.add_argument(
         "--run_id",
         type=int,
         default=None,
-        help="运行轮次 ID（用于 Self-Consistency 模式的文件命名，如 result_1.json）"
+        help="Run identifier for self-consistency output naming (e.g., result_1.json)"
     )
     
     return parser.parse_args()
 
 
 def main():
-    """主函数"""
+    """Main entry point."""
     args = parse_args()
     
-    # 获取全局配置
+    # Load global configuration
     config = get_config()
     
-    # 如果指定了温度，更新配置
+    # Override temperature if provided
     if args.temperature is not None:
         config.temperature = args.temperature
-        print(f"✓ 使用温度: {args.temperature}")
+        print(f"[OK] Temperature: {args.temperature}")
     
-    # 如果指定了模型，更新配置
+    # Override model if provided
     if args.model is not None:
         model_configs = {
             # Qwen2 family
@@ -205,12 +205,12 @@ def main():
             model_cfg = model_configs[args.model]
             config.model_name = model_cfg["model_name"]
             config.model_path = model_cfg["model_path"]
-            print(f"✓ 使用模型: {args.model} ({model_cfg['model_name']})")
+            print(f"[OK] Model: {args.model} ({model_cfg['model_name']})")
         else:
-            print(f"✗ 错误：未知的模型: {args.model}")
+            print(f"[ERR] Unknown model: {args.model}")
             return
     
-    # 创建实验管理器
+    # Build experiment manager
     icl_methods_arg = args.icl_methods.split(',') if args.icl_methods else ["kate"]
     icl_methods = [m.strip() for m in icl_methods_arg if m.strip()]
     if not icl_methods:
@@ -218,11 +218,11 @@ def main():
     valid_icl_methods = {"kate", "random_icl", "bm25", "mapping_error", "topk"}
     invalid_icl = [m for m in icl_methods if m not in valid_icl_methods]
     if invalid_icl:
-        print(f"✗ 错误：无效的 ICL 方法: {', '.join(invalid_icl)}")
-        print("  可选项: kate, random_icl, bm25, mapping_error, topk")
+        print(f"[ERR] Invalid ICL method(s): {', '.join(invalid_icl)}")
+        print("  Options: kate, random_icl, bm25, mapping_error, topk")
         return
     
-    # 检查是否为生成式数据集
+    # Validate generative dataset flags
     GENERATIVE_DATASETS = {
         "math500",
         "math500_pool_ablation",
@@ -230,25 +230,25 @@ def main():
         "aqua_rat_pool_ablation",
     }
     if args.save_outputs and args.dataset not in GENERATIVE_DATASETS:
-        print(f"⚠ 警告：--save_outputs 参数仅对生成式数据集有效")
-        print(f"  当前数据集 '{args.dataset}' 不是生成式数据集，将忽略 --save_outputs 参数")
+        print("[WARN] --save_outputs only applies to generative datasets")
+        print(f"  Dataset '{args.dataset}' is not generative; ignoring --save_outputs")
         args.save_outputs = False
     
-    # 检查 Self-Consistency 模式
+    # Validate self-consistency mode
     if args.self_consistency:
         if args.dataset not in GENERATIVE_DATASETS:
-            print(f"⚠ 警告：--self_consistency 参数仅对生成式数据集有效")
-            print(f"  当前数据集 '{args.dataset}' 不是生成式数据集，将忽略 --self_consistency 参数")
+            print("[WARN] --self_consistency only applies to generative datasets")
+            print(f"  Dataset '{args.dataset}' is not generative; ignoring --self_consistency")
             args.self_consistency = False
         else:
-            print(f"✓ 已启用 Self-Consistency 模式（temperature=0.7 采样）")
+            print("[OK] Self-consistency enabled (temperature=0.7 sampling)")
             if args.run_id is not None:
-                print(f"  运行轮次 ID: {args.run_id}")
+                print(f"  Run ID: {args.run_id}")
             else:
-                print(f"  ⚠ 注意：未指定 --run_id，文件将不包含轮次标识")
+                print("  [WARN] --run_id not set; output files will not include a run identifier")
     
     if args.save_outputs:
-        print(f"✓ 已启用输出保存功能，结果将保存到: {args.output_dir}")
+        print(f"[OK] Output saving enabled; results will be written to: {args.output_dir}")
     
     manager = ExperimentManager(
         dataset=args.dataset,
@@ -264,22 +264,22 @@ def main():
 
     calibration_pool_size = args.calibration_pool_size
     if calibration_pool_size is not None and calibration_pool_size <= 0:
-        print("⚠ 警告：--calibration_pool_size 需为正数，将忽略该参数")
+        print("[WARN] --calibration_pool_size must be positive; ignoring this argument")
         calibration_pool_size = None
     manager.data_loader.calibration_pool_size = calibration_pool_size
     if calibration_pool_size is not None:
-        print(f"✓ 限制示例池大小: {calibration_pool_size}")
+        print(f"[OK] Calibration pool size limited to: {calibration_pool_size}")
     if args.calibration_pool_seed is not None:
         manager.data_loader.calibration_pool_seed = args.calibration_pool_seed
-        print(f"✓ 示例池随机种子: {args.calibration_pool_seed}")
+        print(f"[OK] Calibration pool seed: {args.calibration_pool_seed}")
     
-    # 根据模式运行实验
+    # Run experiment by mode
     if args.mode == "full":
-        # 完整实验
+        # Full experiment
         manager.run_full_experiment(eval_baseline=args.eval_baseline)
     
     elif args.mode == "zero_shot":
-        # 仅评估 Zero-shot 基线
+        # Evaluate zero-shot baseline only
         manager.setup_models()
         calibration_data, test_data = manager.data_loader.load_splits()
         
@@ -287,8 +287,8 @@ def main():
         manager.baseline_evaluator.evaluate_zero_shot(test_data, max_samples=max_samples)
     
     elif args.mode == "random_icl":
-        # 仅评估随机 ICL 基线
-        print(f"\n✓ 使用 ICL 示例数量: {manager.n_shot}")
+        # Evaluate random ICL baseline only
+        print(f"\n[OK] Using ICL example count: {manager.n_shot}")
         manager.setup_models()
         calibration_data, test_data = manager.data_loader.load_splits()
         
@@ -300,21 +300,21 @@ def main():
         )
     
     elif args.mode == "icl":
-        # 仅评估 ICL 基线（支持 kate, bm25, random_icl）
-        print(f"\n✓ 使用 ICL 示例数量: {manager.n_shot}")
+        # Evaluate ICL baselines (supports kate, bm25, random_icl)
+        print(f"\n[OK] Using ICL example count: {manager.n_shot}")
         manager.setup_models()
         calibration_data, test_data = manager.data_loader.load_splits()
         
         max_samples = 100 if args.fast_mode else args.max_samples
         
         for icl_method in icl_methods:
-            print(f"\n--- ICL 方法: {icl_method} ---")
+            print(f"\n--- ICL method: {icl_method} ---")
             manager.set_icl_method(icl_method)
             
-            # 为每个 ICL 方法构建对应的索引（kNN 或 BM25）
+            # Build the index (kNN or BM25) for each ICL method
             embeddings, knn_index = manager.build_knn_index(calibration_data)
             
-            # 预计算测试集邻居（使用当前 ICL 方法）
+            # Precompute test neighbors using the current ICL method
             precomputed_neighbors = manager.precompute_test_neighbors(test_data, calibration_data)
             
             metrics = manager.baseline_evaluator.evaluate_icl(
@@ -324,7 +324,7 @@ def main():
                 max_samples=max_samples
             )
             
-            print(f"\n结果 ({icl_method}):")
+            print(f"\nResults ({icl_method}):")
             for key, value in metrics.items():
                 if isinstance(value, (int, float)):
                     print(f"  {key}: {value:.2f}%")
@@ -332,82 +332,81 @@ def main():
                     print(f"  {key}: {value}")
     
     elif args.mode == "test_scale":
-        # 测试不同 λ 值（Scaling Factor）
+        # Test different lambda scaling factors
         if args.lambda_values is None:
-            print("✗ 错误：--mode test_scale 需要指定 --lambda_values 参数")
-            print("示例: python run_decovec.py --mode test_scale --lambda_values 0.5,1.0,1.5,2.0 --use_cache")
+            print("[ERR] --mode test_scale requires --lambda_values")
+            print("Example: python run_decovec.py --mode test_scale --lambda_values 0.5,1.0,1.5,2.0 --use_cache")
             return
         
-        # 解析 λ 值
+        # Parse lambda values
         try:
             lambda_values = [float(x.strip()) for x in args.lambda_values.split(',')]
         except ValueError:
-            print(f"✗ 错误：无效的 λ 值格式: {args.lambda_values}")
-            print("示例: python run_decovec.py --mode test_scale --lambda_values 0.5,1.0,1.5,2.0")
+            print(f"[ERR] Invalid lambda value format: {args.lambda_values}")
+            print("Example: python run_decovec.py --mode test_scale --lambda_values 0.5,1.0,1.5,2.0")
             return
         
-        print(f"✓ 选择的 λ 值: {lambda_values}")
-        print(f"✓ 使用 ICL 示例数量: {manager.n_shot}")
+        print(f"[OK] Lambda values: {lambda_values}")
+        print(f"[OK] Using ICL example count: {manager.n_shot}")
         
-        # 加载模型
+        # Load models
         manager.setup_models()
         calibration_data, test_data = manager.data_loader.load_splits()
         
         max_samples = 100 if args.fast_mode else args.max_samples
         
-        # 确定 vector_icl_method（用于构造任务向量）
+        # Determine vector_icl_method (for task vector construction)
         vector_icl_method = args.vector_icl_method
         if vector_icl_method is None:
-            # 默认等于第一个 icl_method（保持向后兼容）
+            # Default to first icl_method for backward compatibility
             vector_icl_method = icl_methods[0]
         else:
-            # 验证 vector_icl_method 是否有效
+            # Validate vector_icl_method
             valid_icl_methods = {"kate", "random_icl", "bm25", "mapping_error", "topk"}
             if vector_icl_method not in valid_icl_methods:
-                print(f"✗ 错误：无效的 vector_icl_method: {vector_icl_method}")
-                print(f"  可选项: {', '.join(valid_icl_methods)}")
+                print(f"[ERR] Invalid vector_icl_method: {vector_icl_method}")
+                print(f"  Options: {', '.join(valid_icl_methods)}")
                 return
         
-        # 确定 baseline_icl_method（用于计算 δz 的 baseline prompt）
+        # Determine baseline_icl_method (baseline prompt for delta_z)
         baseline_icl_method = args.baseline_icl_method
         if baseline_icl_method is not None:
-            # 验证 baseline_icl_method 是否有效
+            # Validate baseline_icl_method
             valid_icl_methods = {"kate", "random_icl", "bm25", "mapping_error", "topk"}
             if baseline_icl_method not in valid_icl_methods:
-                print(f"✗ 错误：无效的 baseline_icl_method: {baseline_icl_method}")
-                print(f"  可选项: {', '.join(valid_icl_methods)}")
+                print(f"[ERR] Invalid baseline_icl_method: {baseline_icl_method}")
+                print(f"  Options: {', '.join(valid_icl_methods)}")
                 return
         
         for icl_method in icl_methods:
-            steer_icl_method = icl_method  # 用于推理的 ICL 方法
+            steer_icl_method = icl_method  # ICL method for inference
             
-            # 如果指定了 vector_icl_method，使用它；否则使用 steer_icl_method
+            # Use vector_icl_method if provided; otherwise, use steer_icl_method
             actual_vector_method = vector_icl_method if args.vector_icl_method is not None else steer_icl_method
             
-            print(f"\n--- ICL 方法: {steer_icl_method} ---")
+            print(f"\n--- ICL method: {steer_icl_method} ---")
             if actual_vector_method != steer_icl_method:
-                print(f"  steer_icl_method: {steer_icl_method}（用于推理时的 steering）")
-                print(f"  vector_icl_method: {actual_vector_method}（用于构造任务向量）")
+                print(f"  steer_icl_method: {steer_icl_method} (used for inference steering)")
+                print(f"  vector_icl_method: {actual_vector_method} (used for task vector construction)")
             if baseline_icl_method is not None:
-                print(f"  baseline_icl_method: {baseline_icl_method}（用于计算 δz 的 baseline prompt）")
+                print(f"  baseline_icl_method: {baseline_icl_method} (baseline prompt for computing delta_z)")
             
             manager.set_icl_method(steer_icl_method)
             
-            # 为每个 ICL 方法构建对应的索引（kNN 或 BM25）
-            # 注意：这里构建的索引用于 steer_icl_method（推理时使用）
+            # Build the index (kNN or BM25) for the current ICL method used in inference
             embeddings, knn_index = manager.build_knn_index(calibration_data)
             
-            # 预计算测试集邻居（使用当前 ICL 方法，即 steer_icl_method）
+            # Precompute test neighbors using the current ICL method (steer_icl_method)
             precomputed_neighbors = manager.precompute_test_neighbors(test_data, calibration_data)
             
-            # 计算 delta_z 时使用 actual_vector_method
+            # Compute delta_z using actual_vector_method
             delta_z_cache = manager.compute_delta_z_with_cache(
                 calibration_data,
                 knn_index,
-                icl_method=actual_vector_method  # 使用 vector_icl_method 构造任务向量
+                icl_method=actual_vector_method  # Use vector_icl_method to build task vectors
             )
             
-            # 设置 scale_tester 的 vector_icl_method、steer_icl_method 和 baseline_icl_method
+            # Configure scale_tester methods
             manager.scale_tester.vector_icl_method = actual_vector_method
             manager.scale_tester.steer_icl_method = steer_icl_method
             manager.scale_tester.baseline_icl_method = baseline_icl_method
@@ -421,9 +420,9 @@ def main():
             )
             
             if actual_vector_method != steer_icl_method:
-                print(f"\n✓ λ 值测试完成（steer_icl_method: {steer_icl_method}, vector_icl_method: {actual_vector_method}）")
+                print(f"\n[OK] Lambda sweep complete (steer_icl_method: {steer_icl_method}, vector_icl_method: {actual_vector_method})")
             else:
-                print(f"\n✓ λ 值测试完成（ICL 方法: {steer_icl_method}）")
+                print(f"\n[OK] Lambda sweep complete (ICL method: {steer_icl_method})")
     
 
 

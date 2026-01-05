@@ -1,6 +1,6 @@
 """
-简化配置模块 - 仅保留论文相关参数
-用于 ExperimentManager 等内部模块
+Simplified configuration module with paper-relevant parameters only.
+Used by ExperimentManager and internal modules.
 """
 import os
 from dataclasses import dataclass
@@ -9,37 +9,37 @@ from typing import Optional
 
 @dataclass
 class SimpleConfig:
-    """DeCoVec 实验配置（仅保留论文需要的参数）"""
+    """DeCoVec experiment configuration (paper parameters only)."""
     
-    # 模型配置
+    # Model configuration
     model_name: str = "Qwen/Qwen2-7B"
     model_path: str = "checkpoints/qwen/Qwen2-7B"
     device: str = "cuda:0"
     torch_dtype: str = "float16"  # "float16" or "bfloat16"
     
-    # Embedding 模型（用于 KATE 示例选择）
+    # Embedding model (used for KATE example selection)
     emb_model_path: str = "checkpoints/emb_models/all-MiniLM-L6-v2"
     emb_model_name: str = "all-MiniLM-L6-v2"  # fallback
     
-    # 评估配置
+    # Evaluation configuration
     batch_size: int = 8
-    temperature: float = 0.0  # 生成式任务的温度（0=greedy）
-    max_samples: Optional[int] = None  # None=评估全部样本
+    temperature: float = 0.0  # Temperature for generative tasks (0=greedy)
+    max_samples: Optional[int] = None  # None = evaluate all samples
     results_dir: str = "results"
     
-    # 数据集配置
+    # Dataset configuration
     data_dir: str = "data"
-    seed: int = 42  # 默认随机种子
-    use_full_test_set: bool = True  # 使用完整测试集
+    seed: int = 42  # Default random seed
+    use_full_test_set: bool = True  # Use full test set
     
-    # 数据集特定随机种子（论文实验配置）
+    # Dataset-specific seeds (paper settings)
     dataset_seeds: dict = None
     
-    # 实验名称
+    # Experiment name
     experiment_name: str = "decovec_experiment"
     
     def __post_init__(self):
-        """初始化数据集种子字典"""
+        """Initialize dataset seed mapping."""
         if self.dataset_seeds is None:
             self.dataset_seeds = {
                 "truthful_qa": 44,
@@ -51,25 +51,25 @@ class SimpleConfig:
                 "aqua_rat": 42,
             }
         
-        # 创建必要的目录
+        # Ensure required directories exist
         os.makedirs(self.data_dir, exist_ok=True)
         os.makedirs(self.results_dir, exist_ok=True)
     
     def get_seed(self, dataset_name: str) -> int:
-        """获取数据集对应的随机种子"""
+        """Get the seed for a dataset."""
         return self.dataset_seeds.get(dataset_name, self.seed)
 
 
-# 全局配置实例
+# Global configuration instance
 _config = SimpleConfig()
 
 
 def get_config():
-    """获取全局配置"""
+    """Return the global configuration."""
     return _config
 
 
 def set_config(new_config: SimpleConfig):
-    """设置全局配置"""
+    """Set the global configuration."""
     global _config
     _config = new_config
