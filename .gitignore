@@ -1,0 +1,82 @@
+# ============================================
+# Python
+# ============================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+*.cover
+*.log
+
+# ============================================
+# Virtual Environments
+# ============================================
+venv/
+env/
+ENV/
+.venv/
+.env
+
+# ============================================
+# IDEs and Editors
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# ============================================
+# Jupyter Notebook
+# ============================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# ============================================
+# Project Specific - Models and Caches
+# ============================================
+**/checkpoints/
+**/cache_icl/
+**/.trae
+
+# ============================================
+# Project Specific - Results and Outputs
+# ============================================
+**/results/case/
+**/results/self_consistancy/
+**/results/*.png
+**/results/*.jpg
+**/results/*.pdf
+
+# ============================================
+# Project Specific - Data
+# ============================================
+/data/original_dataset/MATH/
+/data/original_dataset/aqua_rat/
+/data/original_dataset/math-500/
+/data/original_dataset/TruthfulQA-main/
+*.parquet
+*.arrow
+
+# ============================================
+# Temporary Files
+# ============================================
+*.tmp
+*.bak
+*.swp
+.cache/
+tmp/
+temp/

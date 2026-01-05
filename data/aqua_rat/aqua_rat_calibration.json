@@ -1,0 +1,2302 @@
+[
+  {
+    "id": 0,
+    "question": "If a quarter kilogram costs Rs . 60 then how much will cost for 150 grams ?",
+    "choices": [
+      "Rs . 30",
+      "Rs . 24",
+      "Rs . 36",
+      "Rs . 40",
+      "Rs . 45"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Given 250 gms costs Rs . 60 / -\nThen 50 gm costs Rs . 12\n: . 150 gm costs 3 x 12 = - Rs . 36 / - .\nAnswer : Option C\n#### C",
+    "final_answer": "C",
+    "answer_label": "C",
+    "answer_text": "Rs . 36",
+    "rationale": "Given 250 gms costs Rs . 60 / -\nThen 50 gm costs Rs . 12\n: . 150 gm costs 3 x 12 = - Rs . 36 / - .\nAnswer : Option C"
+  },
+  {
+    "id": 1,
+    "question": "If 2 s > 8 and 4 t < 12 , which of the following could be the value of s - t ?\nI . - 1\nII . 0\nIII . 1",
+    "choices": [
+      "None",
+      "I only",
+      "II only",
+      "III only",
+      "II and III"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "2 s > 8 , then s > 4\n4 t < 12 , then t < 3 and - t > - 3\nIf we add the two inequalities : s - t > 1\nThe answer is A .\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "None",
+    "rationale": "2 s > 8 , then s > 4\n4 t < 12 , then t < 3 and - t > - 3\nIf we add the two inequalities : s - t > 1\nThe answer is A ."
+  },
+  {
+    "id": 2,
+    "question": "John needs to mix a cleaning solution in the following ratio : 1 part bleach for every 4 parts water . When mixing the solution , John makes a mistake and mixes in half as much bleach as he ought to have . The total solution consists of 36 ml . How many ml of bleach did John put into the solution ?",
+    "choices": [
+      "9",
+      "6",
+      "5",
+      "4",
+      "3"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "The ratio that John used by mistake was 1 : 8 .\nThus , 1 / 9 of the solution is bleach .\n( 1 / 9 ) * 36 = 4 ml\nThe answer is D .\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "4",
+    "rationale": "The ratio that John used by mistake was 1 : 8 .\nThus , 1 / 9 of the solution is bleach .\n( 1 / 9 ) * 36 = 4 ml\nThe answer is D ."
+  },
+  {
+    "id": 3,
+    "question": "A builder has to pour a concrete slab 12 centimeters thick to cover an area 10 meters long and 2 meters wide . How many cubic meters of concrete will the builder need ?",
+    "choices": [
+      "1.4 cubic meter",
+      "2.4 cubic meter",
+      "3.4 cubic meter",
+      "4.4 cubic meter",
+      "5.4 cubic meter"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Thikness = 12 cm . = 0.12 m .\narea is 10 m . long and 2 m . wide ;\nSo , total concrete needed is = the volumn of the area = ( 0.12 * 10 * 2 ) = 2.4 cubic meter .\nANSWER : B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "2.4 cubic meter",
+    "rationale": "Thikness = 12 cm . = 0.12 m .\narea is 10 m . long and 2 m . wide ;\nSo , total concrete needed is = the volumn of the area = ( 0.12 * 10 * 2 ) = 2.4 cubic meter .\nANSWER : B"
+  },
+  {
+    "id": 4,
+    "question": "Fernando Alonso and Sebastian Vettel go for a car race . Before the start of race , both of them have the exactly same amount of fuel in their respective cars . With the given fuel Fernando can drive continuously for 4 hours while Vettel can drive 1 hour more .\nAfter some time they realize that amount of fuel left in Sebastian car is 4 times the fuel in Fernando car .\nFor long have they been racing ?",
+    "choices": [
+      "15 / 4 hours",
+      "16 / 4 hours",
+      "17 / 6 hours",
+      "12 / 9 hours",
+      "16 / 7 hours"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Let us say they drive for ` ` t ' ' hours and the initial fuel is ` ` f ' '\nAmount of fuel consumed by Fernando car is ft / 4\nAmount of fuel consumed by Sebastian car is ft / 5\nAs per given condition ,\nf - ft / 5 = 4 ( f - ft / 4 )\nt = 15 / 4 hours\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "15 / 4 hours",
+    "rationale": "Let us say they drive for ` ` t ' ' hours and the initial fuel is ` ` f ' '\nAmount of fuel consumed by Fernando car is ft / 4\nAmount of fuel consumed by Sebastian car is ft / 5\nAs per given condition ,\nf - ft / 5 = 4 ( f - ft / 4 )\nt = 15 / 4 hours"
+  },
+  {
+    "id": 5,
+    "question": "The salaries of Kiran , Prakash and Sanjay are in the ratio of 2 : 3 : 4 . The salary of Prakash and Sanjay together is Rs . 56000 . The manager plans to increment the salary of Prakash from his current package and does so by increasing his salary so that it is 1 rupee more than that of Sanjay . Now , if Kiran wishes to demand a salary that will surpass Prakash ' s by 1 Rupee , how much he should demand ?",
+    "choices": [
+      "Rs . 16002",
+      "Rs . 16004",
+      "Rs . 16015",
+      "Rs . 16001",
+      "Rs . 16101"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "p + s = 56000\nlet us consider salaries of k , p , s salaries ratio 2 x , 3 x , 4 x respectively\n3 x + 4 x = 56000\nx = 8000\nThen , kiran demanded that will suprass prakash ' s by 1 rupee\nThen , kiran salary = 2 x + 2 = 2 * 8000 + 2 = 16002\nANSWER : A\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "Rs . 16002",
+    "rationale": "p + s = 56000\nlet us consider salaries of k , p , s salaries ratio 2 x , 3 x , 4 x respectively\n3 x + 4 x = 56000\nx = 8000\nThen , kiran demanded that will suprass prakash ' s by 1 rupee\nThen , kiran salary = 2 x + 2 = 2 * 8000 + 2 = 16002\nANSWER : A"
+  },
+  {
+    "id": 6,
+    "question": "A shrewd opportunist bought 50 equally priced Kale Kids in November for t dollars total . In December , he sold each Kale Kid for a profit of 100 percent . In terms of t , how much was each Kale Kid sold for ?",
+    "choices": [
+      "t / 20",
+      "5 t / 2",
+      "250 t",
+      "t / 25",
+      "250 / t"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Price of 1 kid = t / 50\nSo , SP at a profit of 150 percent = t / 50 + 100 / 100 ( t / 50 ) = t / 50 + t / 50 = 2 t / 50 = t / 25\nAnswer - D\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "t / 25",
+    "rationale": "Price of 1 kid = t / 50\nSo , SP at a profit of 150 percent = t / 50 + 100 / 100 ( t / 50 ) = t / 50 + t / 50 = 2 t / 50 = t / 25\nAnswer - D"
+  },
+  {
+    "id": 7,
+    "question": "Box W and Box V each contain several blue sticks and red sticks , and all of the red sticks have the same length . The length of each red stick is 19 inches less that the average length of the sticks in Box W and 6 inches greater than the average length of the sticks in Box V . What is the average ( arithmetic mean ) length , in inches , of the sticks in Box W minus the average length , in inches , of the sticks in Box V ?",
+    "choices": [
+      "3",
+      "6",
+      "12",
+      "25",
+      "30"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "W has x red and y blue . V has a red and b blue\nlength ( x ) = length ( a ) = length ( x ) * x + length ( y ) * y / x + y + 19 = length ( a ) * a + length ( b ) * b / a + b + 6\nshifting terms , we get the first term minus second term is 6 + 19 = 25\nD\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "25",
+    "rationale": "W has x red and y blue . V has a red and b blue\nlength ( x ) = length ( a ) = length ( x ) * x + length ( y ) * y / x + y + 19 = length ( a ) * a + length ( b ) * b / a + b + 6\nshifting terms , we get the first term minus second term is 6 + 19 = 25\nD"
+  },
+  {
+    "id": 8,
+    "question": "The function P ~ can be expressed as 2 - P for all values of P . What is the value of ( 7 ~ ) ~ ?",
+    "choices": [
+      "7",
+      "12",
+      "14",
+      "22",
+      "26"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "( 7 ~ ) ~\n= ( 2 - 7 ) ~\n= ( - 5 ) ~\n= 2 - ( - 5 )\n= 7\nCorrect Option : A\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "7",
+    "rationale": "( 7 ~ ) ~\n= ( 2 - 7 ) ~\n= ( - 5 ) ~\n= 2 - ( - 5 )\n= 7\nCorrect Option : A"
+  },
+  {
+    "id": 9,
+    "question": "Which of the following is the equation of a line that goes through the point ( 10,5 ) and has an x - intercept of 5 .",
+    "choices": [
+      "y = x - 4",
+      "y = x - 5",
+      "y = 2 x - 4",
+      "y = 2 x - 5",
+      "y = 3 x - 4"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "If a line has an x - intercept of 5 , by definition , the line must go through the point ( 5,0 ) . You now have two points , which will form a line : ( 5,0 ) and ( 10,5 ) .\nCalculate the slope of the line ( i . e . , rise over run ) .\nRise = change in y = 5 - 0 = 5\nRun = change in x = 10 - 5 = 5\nSlope = Rise / Run = 5 / 5 = 1\nSubstitute the slope , 1 , in for m .\ny = mx + b\ny = 1 x + b\ny = x + b\nSubstitute an ordered pair in for x and y and solve for b , which is the intercept . Use ( 10 , 5 ) .\n5 = 1 * 10 + b\n5 - 10 = b\nb = - 5\nAnswer is B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "y = x - 5",
+    "rationale": "If a line has an x - intercept of 5 , by definition , the line must go through the point ( 5,0 ) . You now have two points , which will form a line : ( 5,0 ) and ( 10,5 ) .\nCalculate the slope of the line ( i . e . , rise over run ) .\nRise = change in y = 5 - 0 = 5\nRun = change in x = 10 - 5 = 5\nSlope = Rise / Run = 5 / 5 = 1\nSubstitute the slope , 1 , in for m .\ny = mx + b\ny = 1 x + b\ny = x + b\nSubstitute an ordered pair in for x and y and solve for b , which is the intercept . Use ( 10 , 5 ) .\n5 = 1 * 10 + b\n5 - 10 = b\nb = - 5\nAnswer is B"
+  },
+  {
+    "id": 10,
+    "question": "Let A , B and C denote the vertices of a triangle with area 10 . Let point D be on side AB ,\npoint E be on side BC and point F be on side CA with AD = 2 and DB = 3 . The area of\n△ ABE and the area of quadrilateral DBEF are the same . What is the value of this area ?",
+    "choices": [
+      "5.5",
+      "6",
+      "7",
+      "8",
+      "8.25"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "First , note that 4 AFD and 4 AFE have the same area . Therefore , ED is parallel to AF .\nSince 4 DEB and 4 ACB are similar , BE = EC = 3 = 2 . Thus , the area of 4 AEB is 3 = 5 ths of the\narea of 4 ABC .\ncorrect answer B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "6",
+    "rationale": "First , note that 4 AFD and 4 AFE have the same area . Therefore , ED is parallel to AF .\nSince 4 DEB and 4 ACB are similar , BE = EC = 3 = 2 . Thus , the area of 4 AEB is 3 = 5 ths of the\narea of 4 ABC .\ncorrect answer B"
+  },
+  {
+    "id": 11,
+    "question": "G and H are each equal to 20 % of Z . If G , H , and F are equal to 100 % of Z together , what percentage of Z is F ?",
+    "choices": [
+      "80 %",
+      "60 %",
+      "40 %",
+      "100 %",
+      "20 %"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "if . . .\nG = . 2 Z\nH = . 2 Z\nG + H + F = Z\nthen . . .\nZ = . 2 z + . 2 z + F\nZ = . 4 z + F\nSubtract . 4 z from both sides\n. 6 z = F\nF is 60 % of Z\nThe answer is B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "60 %",
+    "rationale": "if . . .\nG = . 2 Z\nH = . 2 Z\nG + H + F = Z\nthen . . .\nZ = . 2 z + . 2 z + F\nZ = . 4 z + F\nSubtract . 4 z from both sides\n. 6 z = F\nF is 60 % of Z\nThe answer is B"
+  },
+  {
+    "id": 12,
+    "question": "I have an amazing bath tub having both hot and cold water taps .\nThe cold water tap can fill my tub in 6 hours while cold water tap can fill the tub in approximately 4 hours .\nI turned them on simultaneously but forgot to close the lid which removes the water out of tub .\nThe lid can empty the tub in exact 13 hours .\nSince both taps are open along with the lib , can you estimate the time needed to fill the bath tub ?",
+    "choices": [
+      "1.8 hours",
+      "6 hours",
+      "2.5 hours",
+      "4 hours",
+      "3 hours"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "( 1 / 4 + 1 / 6 - 1 / 12 ) ^ ( - 1 )\n= ( 1 / 3 ) ^ ( - 1 ) = 3\n#### E",
+    "final_answer": "E",
+    "answer_label": "E",
+    "answer_text": "3 hours",
+    "rationale": "( 1 / 4 + 1 / 6 - 1 / 12 ) ^ ( - 1 )\n= ( 1 / 3 ) ^ ( - 1 ) = 3"
+  },
+  {
+    "id": 13,
+    "question": "Terry has some oranges . Out of that , 4 % were thrown away , 80 % of the remaining oranges were sold and he is now left with 48 oranges . What was the initial number of oranges with him ?",
+    "choices": [
+      "100",
+      "200",
+      "300",
+      "350",
+      "250"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Assume total oranges = 100 x\nOranges remaining after throwing away = 96 x\n80 % sold of these sold .\nHence remaining oranges = 0.2 * 96 x\nGiven , 0.2 * 96 x = 48\nHence 0.2 x = 0.5\nx = 2.5\nTotal oranges = 250 ;\nANSWER : E\n#### E",
+    "final_answer": "E",
+    "answer_label": "E",
+    "answer_text": "250",
+    "rationale": "Assume total oranges = 100 x\nOranges remaining after throwing away = 96 x\n80 % sold of these sold .\nHence remaining oranges = 0.2 * 96 x\nGiven , 0.2 * 96 x = 48\nHence 0.2 x = 0.5\nx = 2.5\nTotal oranges = 250 ;\nANSWER : E"
+  },
+  {
+    "id": 14,
+    "question": "A rectangular piece of cloth 2 feet wide was cut lengthwise into two smaller rectangular pieces . The shorter piece was one - third of the length of the longer of the 2 new pieces and had an area of 12 square feet . What was the length Q in feet of the original piece of cloth before cutting ?",
+    "choices": [
+      "6",
+      "18",
+      "24",
+      "36",
+      "48"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "The question says , length of shorter piece is 1 / 3 rd of the length of longer of the two new pieces\nThis means after I split it into two pieces , I have a shorter piece and a longer one . The length of shorter is 1 / 3 rd the length of longer . The 6 I found out was length of shorter piece . Then , length of longer should be 18 and total length should be 24 .\n#### C",
+    "final_answer": "C",
+    "answer_label": "C",
+    "answer_text": "24",
+    "rationale": "The question says , length of shorter piece is 1 / 3 rd of the length of longer of the two new pieces\nThis means after I split it into two pieces , I have a shorter piece and a longer one . The length of shorter is 1 / 3 rd the length of longer . The 6 I found out was length of shorter piece . Then , length of longer should be 18 and total length should be 24 ."
+  },
+  {
+    "id": 15,
+    "question": "Which is a longer period of time : 3 hours or 175 minutes ?",
+    "choices": [
+      "1 hours",
+      "2 hours",
+      "3 hours",
+      "175 minutes",
+      "60 minutes"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "convert 3 hours into minute\n60 minutes x 3 hours = 180 minutes\n175 minutes\nANSWER : C\n#### C",
+    "final_answer": "C",
+    "answer_label": "C",
+    "answer_text": "3 hours",
+    "rationale": "convert 3 hours into minute\n60 minutes x 3 hours = 180 minutes\n175 minutes\nANSWER : C"
+  },
+  {
+    "id": 16,
+    "question": "An investor purchased shares of stock at a certain price . If the stock increased in price Rs 0.25 per share and the total increase for the x shares was Rs 12.50 , how many shares of stock had been purchased ?",
+    "choices": [
+      "25",
+      "50",
+      "75",
+      "100",
+      "125"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Increase in 1 share = Rs . 0.25\nincrease in x shares = Rs . 12.50\nso x = 12.50 / 0.25 = 50\nANSWER : B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "50",
+    "rationale": "Increase in 1 share = Rs . 0.25\nincrease in x shares = Rs . 12.50\nso x = 12.50 / 0.25 = 50\nANSWER : B"
+  },
+  {
+    "id": 17,
+    "question": "Divide the number 49 into two parts , such that if the greater part is increased by 6 and the lesser part is decreased by 11 , their ratio is 9 to 2 .",
+    "choices": [
+      "29",
+      "30",
+      "31",
+      "32",
+      "None"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Let x = the greater part , and 49 - x = the lesser part .\nBy the conditions proposed , x + 6 : 49 - x - 11 = x + 6 : 38 - x - = 9 : 2\nAdding the terms , x + 6 : 44 = 9 : 11\nx + 6 : 4 = 9 : 1\nx + 6 = 36 . And x = 30 .\nAnswer B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "30",
+    "rationale": "Let x = the greater part , and 49 - x = the lesser part .\nBy the conditions proposed , x + 6 : 49 - x - 11 = x + 6 : 38 - x - = 9 : 2\nAdding the terms , x + 6 : 44 = 9 : 11\nx + 6 : 4 = 9 : 1\nx + 6 = 36 . And x = 30 .\nAnswer B"
+  },
+  {
+    "id": 18,
+    "question": "It takes 4 men 6 hours to repair a road . How long will it take 8 men to do the job if they work at the same rate ?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5",
+      "3.5"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Let t be the time taken for the 8 men to finish the job .\n4 * 6 = 8 * t\n24 = 8 t\nt = 3 hours\nAnswer : B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "3",
+    "rationale": "Let t be the time taken for the 8 men to finish the job .\n4 * 6 = 8 * t\n24 = 8 t\nt = 3 hours\nAnswer : B"
+  },
+  {
+    "id": 19,
+    "question": "A certain straight corridor has four doors , A , B , C and D ( in that order ) leading off from the same side . How far apart are doors B and C ? The distance between doors B and D is 10 meters . The distance between A and C is 12 meters .",
+    "choices": [
+      "5",
+      "4",
+      "3",
+      "2",
+      "1"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "AB + BC = 12 and BC + CD = 10 hence BC = 12 - AB and BC = 10 - CD hence 12 - AB = 10 - CD\nAB - CD = 2 AB - CD is nothing but BC , hence BC = 2\nANSWER : D\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "2",
+    "rationale": "AB + BC = 12 and BC + CD = 10 hence BC = 12 - AB and BC = 10 - CD hence 12 - AB = 10 - CD\nAB - CD = 2 AB - CD is nothing but BC , hence BC = 2\nANSWER : D"
+  },
+  {
+    "id": 20,
+    "question": "Mr . X died when his age was 1 / 59 th of year of birth . What was his date of birth ?",
+    "choices": [
+      "1947",
+      "1948",
+      "1980",
+      "2000",
+      "1998"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Let his age was x ( when he died ) and birth date is y then\ny * ( 1 / 59 ) = x\ny = 59 * x\nnow we put x value\n59 * 32 = 1888\n59 * 33 = 1947\n59 * 34 = 2006\nANSWER : A\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "1947",
+    "rationale": "Let his age was x ( when he died ) and birth date is y then\ny * ( 1 / 59 ) = x\ny = 59 * x\nnow we put x value\n59 * 32 = 1888\n59 * 33 = 1947\n59 * 34 = 2006\nANSWER : A"
+  },
+  {
+    "id": 21,
+    "question": "You are buying pumpkins at a local farmer ' s market and are paying for the pumpkins by weight . Your container weighs 30 pounds . The pumpkins plus the container weighs 90 pounds . If you bought 10 pumpkins , how much was the average weight of your pumpkins ?",
+    "choices": [
+      "9 pounds",
+      "3 pounds",
+      "7 pounds",
+      "6 pounds",
+      "5 pounds"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Total weight = 90\nContainer weight = 30\nWeight of pumpkins = 90 - 30\nAverage weight = ( 90 - 30 ) / 10 = 6\nAnswer : D\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "6 pounds",
+    "rationale": "Total weight = 90\nContainer weight = 30\nWeight of pumpkins = 90 - 30\nAverage weight = ( 90 - 30 ) / 10 = 6\nAnswer : D"
+  },
+  {
+    "id": 22,
+    "question": "50 % of all high school students hate roller coasters ; the rest love them . 20 % of those students who love roller coasters own chinchillas . What percentage of students love roller coasters but do not own a chinchilla ?",
+    "choices": [
+      "12 %",
+      "40 %",
+      "48 %",
+      "60 %",
+      "80 %"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Make a Table as mentioned below\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Love Roller Coasters - - - - - - - - - - - - - - - - - - - - - Hate Roller Coasters - - - - - - - - - - - - - - - - Total\nOwn chinchillas - - - - - - - - - - - - - - - - - - - - - - - - - - 20 % of 50 % = 10 % - - - - - - - - - - - - - - - - - - - -\nDo n ' t own chinchillas - - - - - - - - - - - - - - - - - - - 50 % - 10 % = 40 % - - - - - - - - - - - - - - - - - - - - - -\nTotal - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 50 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 50 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\nAnswer : Option B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "40 %",
+    "rationale": "Make a Table as mentioned below\n- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - Love Roller Coasters - - - - - - - - - - - - - - - - - - - - - Hate Roller Coasters - - - - - - - - - - - - - - - - Total\nOwn chinchillas - - - - - - - - - - - - - - - - - - - - - - - - - - 20 % of 50 % = 10 % - - - - - - - - - - - - - - - - - - - -\nDo n ' t own chinchillas - - - - - - - - - - - - - - - - - - - 50 % - 10 % = 40 % - - - - - - - - - - - - - - - - - - - - - -\nTotal - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 50 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 50 % - - - - - - - - - - - - - - - - - - - - - - - - - - - - -\nAnswer : Option B"
+  },
+  {
+    "id": 23,
+    "question": "John buys koolaid for 12 $ at a local store . If he bought it at the wholesale store he would get an extra liter of koolaid for the same cost . Also , the koolaid is 1 $ cheaper per liter at the wholesale store . What is the price per liter of the koolaid at the local store ?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "12 / ( x + 1 ) = 12 / x - 1\n= > x = - 4 or 3\n= > x = 3 as price can not be negative .\n= > price per liter at local store = 12 / 3 = 4\nAnswer B .\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "4",
+    "rationale": "12 / ( x + 1 ) = 12 / x - 1\n= > x = - 4 or 3\n= > x = 3 as price can not be negative .\n= > price per liter at local store = 12 / 3 = 4\nAnswer B ."
+  },
+  {
+    "id": 24,
+    "question": "A train does a journey without stopping for 8 hours . If it had traveled 5 km an hour faster , it would have done the journey in 6 hours 40 min . What is its slower speed ?",
+    "choices": [
+      "35 kmph",
+      "25 kmph",
+      "40 kmph",
+      "50 kmph",
+      "None of these"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Let its slower speed = V km per hour\nHere , the distance is same in both the cases\nUsing the formula = V 1 x t 1 = V 2 x t 2\nor , V x 8 = ( V + 5 ) x 20 / 3\nor , 24 V = ( V + 5 ) x 20\nV = 25 km / h\nThus , The slower speed of train is 25 km / h .\nANSWER : B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "25 kmph",
+    "rationale": "Let its slower speed = V km per hour\nHere , the distance is same in both the cases\nUsing the formula = V 1 x t 1 = V 2 x t 2\nor , V x 8 = ( V + 5 ) x 20 / 3\nor , 24 V = ( V + 5 ) x 20\nV = 25 km / h\nThus , The slower speed of train is 25 km / h .\nANSWER : B"
+  },
+  {
+    "id": 25,
+    "question": "Manoj left home for the bus stop 15 minutes earlier than the usual time . It takes 10 minutes to reach the stop . He reached the stop at 8.40 AM . What time does he usually leave home for the bus stop ?",
+    "choices": [
+      "8 : 30 AM",
+      "8.55 AM",
+      "8 : 45 PM",
+      "Data inadequate",
+      "None of these"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "He takes 10 mins to reach at the bus station . So , he left the room at 8.30 am . This time he left 15 minutes earlier , so he usually leaves home at 8.30 + 15 = 8.45 am\nANSWER : D\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "Data inadequate",
+    "rationale": "He takes 10 mins to reach at the bus station . So , he left the room at 8.30 am . This time he left 15 minutes earlier , so he usually leaves home at 8.30 + 15 = 8.45 am\nANSWER : D"
+  },
+  {
+    "id": 26,
+    "question": "In 1989 the price of a new model S car was x dollars . If the price of the model S car increased each year by 10 percent of the previous year ' s price , what was the price of the car , in dollars , in 1991 ?",
+    "choices": [
+      "1.10 x",
+      "1.20 x",
+      "1.21 x",
+      "1.25 x",
+      "1.33 x"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Price of car in 1989 = x\n10 percent increase per year for 2 years\nPrice of car in 1991 = ( 1.1 ) ^ 2 * x\n= 1.21 x\nAnswer C\n#### C",
+    "final_answer": "C",
+    "answer_label": "C",
+    "answer_text": "1.21 x",
+    "rationale": "Price of car in 1989 = x\n10 percent increase per year for 2 years\nPrice of car in 1991 = ( 1.1 ) ^ 2 * x\n= 1.21 x\nAnswer C"
+  },
+  {
+    "id": 27,
+    "question": "Company X receives 16 applications for a job , 6 of which are from present employees of the company . If 3 of the applicants are to be hired , including exactly one of the applicants who is not a present employee of the company , how many distinct groups of applicants can be selected ?",
+    "choices": [
+      "560",
+      "270",
+      "224",
+      "150",
+      "60"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Out of the 16 applications , 6 are from present employees and 10 are from outside applicants .\nFrom the 6 present employees , 2 need to be selected .\nFrom the 10 outside applicants , 1 needs to be selected .\nSo you can make a group of three in 6 C 2 * 10 C 1 = 150 ways\nAnswer ( D )\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "150",
+    "rationale": "Out of the 16 applications , 6 are from present employees and 10 are from outside applicants .\nFrom the 6 present employees , 2 need to be selected .\nFrom the 10 outside applicants , 1 needs to be selected .\nSo you can make a group of three in 6 C 2 * 10 C 1 = 150 ways\nAnswer ( D )"
+  },
+  {
+    "id": 28,
+    "question": "A 5 liter mixture of water and sugar is 50 % sugar . If 1 liter of water is added , approximately what is the % of the new mixture of sugar ?",
+    "choices": [
+      "40 %",
+      "50 %",
+      "60 %",
+      "64 %",
+      "68"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Original quantity of water - 5 lits\nOriginal % of sugar - 50 %\nAdditional quantity of water added - 1 liter\n% of additional quantity of water added - 1 / 5 = 20 %\nApproximate decrease in the % of sugar in new mixture - 20 %\nApproximate decrease in the % sugar = 20 % of 50 % = 10 %\nApproximate new % of sugar = 50 % - 10 % = 40 %\nAnswer - A\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "40 %",
+    "rationale": "Original quantity of water - 5 lits\nOriginal % of sugar - 50 %\nAdditional quantity of water added - 1 liter\n% of additional quantity of water added - 1 / 5 = 20 %\nApproximate decrease in the % of sugar in new mixture - 20 %\nApproximate decrease in the % sugar = 20 % of 50 % = 10 %\nApproximate new % of sugar = 50 % - 10 % = 40 %\nAnswer - A"
+  },
+  {
+    "id": 29,
+    "question": "John invested $ 100 in each of the funds A and B . After one year , the value of the money in fund A was $ 10 higher than the value of the money in fund B . After another year , the value of the money in fund A was $ 25 higher than the value of the money in fund B . If the value of the money in each fund increased by a fixed interest compounded annually , what was the annual interest of fund A ?",
+    "choices": [
+      "20 %",
+      "30 %",
+      "40 %",
+      "50 %",
+      "60 %"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "If rate of interest in fund A is 20 % , rate of interest in fund B is 10 % and difference in interest earned on interest = 20 % of 20 - 10 % of 10 = 4 - 1 = 3\nIf rate of interest in fund A is 30 % , rate of interest in fund B is 20 % and difference in interest earned on interest = 30 % of 30 - 20 % of 20 = 9 - 4 = 5\nAnswer ( B )\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "30 %",
+    "rationale": "If rate of interest in fund A is 20 % , rate of interest in fund B is 10 % and difference in interest earned on interest = 20 % of 20 - 10 % of 10 = 4 - 1 = 3\nIf rate of interest in fund A is 30 % , rate of interest in fund B is 20 % and difference in interest earned on interest = 30 % of 30 - 20 % of 20 = 9 - 4 = 5\nAnswer ( B )"
+  },
+  {
+    "id": 30,
+    "question": "Mr . Bean chooses a number and he keeps on doubling the number followed by subtracting one from it , if he chooses 3 as initial number and he repeats the operation for 30 times then what is the final result ?",
+    "choices": [
+      "22",
+      "77",
+      "269",
+      "279",
+      "71"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Step 1 : ( 3 x 2 ) - 1 = 5 ( 2 ^ 2 + 1 )\nStep 2 : ( 5 x 2 ) - 1 = 9 ( 2 ^ 3 + 1 )\nStep 3 : ( 9 x 2 ) - 1 = 17 ( 2 ^ 4 + 1 )\nStep 4 : ( 17 x 2 ) - 1 = 33 ( 2 ^ 5 + 1 )\nSo After 30 steps we have 2 ^ 31 + 1\nAns : B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "77",
+    "rationale": "Step 1 : ( 3 x 2 ) - 1 = 5 ( 2 ^ 2 + 1 )\nStep 2 : ( 5 x 2 ) - 1 = 9 ( 2 ^ 3 + 1 )\nStep 3 : ( 9 x 2 ) - 1 = 17 ( 2 ^ 4 + 1 )\nStep 4 : ( 17 x 2 ) - 1 = 33 ( 2 ^ 5 + 1 )\nSo After 30 steps we have 2 ^ 31 + 1\nAns : B"
+  },
+  {
+    "id": 31,
+    "question": "In recent Malta elections , in a particular constituency , 100,000 votes were cast and each vote was cast for\neither Candidate A or Candidate B . If candidate A has won by 500 votes , what percent of the 100,000 votes\nwere cast for Candidate A ?",
+    "choices": [
+      "50.05 %",
+      "50.25 %",
+      "50.5 %",
+      "51 %",
+      "52.5 %"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Difference of 500 means A got 250 votes above the midway . . .\nSo A got 100,000 / 2 + 250 = 50250 . . .\n% = 50250 * 100 / 100000 = 50.25 %\nANSWER : B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "50.25 %",
+    "rationale": "Difference of 500 means A got 250 votes above the midway . . .\nSo A got 100,000 / 2 + 250 = 50250 . . .\n% = 50250 * 100 / 100000 = 50.25 %\nANSWER : B"
+  },
+  {
+    "id": 32,
+    "question": "M is a set of even numbers from 1 to 23 and odd numbers from 24 to 100 . Find no . of zeroes in the sum of all values in the set .",
+    "choices": [
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "We have to find no of occurrence of 5 .\n10 - 1 . 35 - 1 . 65 - 1 . 95 - 1\n20 - 1 . 45 - 1 . 75 - 2\n25 - 2 . 55 - 1 . 85 - 1\nTotal 12\nANSWER : E\n#### E",
+    "final_answer": "E",
+    "answer_label": "E",
+    "answer_text": "12",
+    "rationale": "We have to find no of occurrence of 5 .\n10 - 1 . 35 - 1 . 65 - 1 . 95 - 1\n20 - 1 . 45 - 1 . 75 - 2\n25 - 2 . 55 - 1 . 85 - 1\nTotal 12\nANSWER : E"
+  },
+  {
+    "id": 33,
+    "question": "Davji Shop sells samosas in boxes of different sizes . The samosas are priced at Rs . 2 per samosa up to 200 samosas . For every additional 20 samosas , the price of the whole lot goes down by 10 paise per samosa . What should be the maximum size of the box that would maximise the revenue ?",
+    "choices": [
+      "240",
+      "300",
+      "400",
+      "None of these",
+      "Can not be determined"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Number of samosas = 200 + 20 n , where n is a natural number .\nPrice per samosa = Rs ( 2 - 0.1 n ) .\nRevenue = ( 200 + 20 n ) ( 2 - 0.1 n ) = 400 + 20 n - 2 n 2 .\nFor maxima 20 - 4 n = 0 , by differentiation n = 5 .\n= > Maximum revenue will be at ( 200 + 20 x 5 ) i . e 300 samosas .\nAnswer : B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "300",
+    "rationale": "Number of samosas = 200 + 20 n , where n is a natural number .\nPrice per samosa = Rs ( 2 - 0.1 n ) .\nRevenue = ( 200 + 20 n ) ( 2 - 0.1 n ) = 400 + 20 n - 2 n 2 .\nFor maxima 20 - 4 n = 0 , by differentiation n = 5 .\n= > Maximum revenue will be at ( 200 + 20 x 5 ) i . e 300 samosas .\nAnswer : B"
+  },
+  {
+    "id": 34,
+    "question": "Ashish is given Rs . 158 in one - rupee denominations . He has been asked to allocate them into a number of bags such that any amount required between Re 1 and Rs . 158 can be given by handing out a certain number of bags without opening them . What is the minimum number of bags required ?",
+    "choices": [
+      "11",
+      "12",
+      "13",
+      "14",
+      "None of these"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "No . of one rupee coins = 158 .\nPossible arrangement of coins are listed as\n1 , 2,4 , 8,16 , 32,64 and 31 .\nSo , number of arrangements = 8 .\nHence , the least number of bags required is 8 .\nAnswer : E\n#### E",
+    "final_answer": "E",
+    "answer_label": "E",
+    "answer_text": "None of these",
+    "rationale": "No . of one rupee coins = 158 .\nPossible arrangement of coins are listed as\n1 , 2,4 , 8,16 , 32,64 and 31 .\nSo , number of arrangements = 8 .\nHence , the least number of bags required is 8 .\nAnswer : E"
+  },
+  {
+    "id": 35,
+    "question": "The population of a city increases at the rate of 4 % per annum . There is an additional annual increase of 1 % in the population due to the influx of job seekers . Therefore , the % increase in the population after 2 years will be :",
+    "choices": [
+      "10",
+      "10.25",
+      "10.55",
+      "10.75",
+      "None of these"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "The net annual increase = 5 % .\nLet the initial population be 100 .\nThen , population after 2 years = 100 × 1.05 × 1.05\n= 110.25\nTherefore , % increase in population\n= ( 110.25 – 100 ) = 10.25 % Answer B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "10.25",
+    "rationale": "The net annual increase = 5 % .\nLet the initial population be 100 .\nThen , population after 2 years = 100 × 1.05 × 1.05\n= 110.25\nTherefore , % increase in population\n= ( 110.25 – 100 ) = 10.25 % Answer B"
+  },
+  {
+    "id": 36,
+    "question": "A salon spa loyalty program magazine charges a $ 250 program fee . In light of new tax laws , the price is planned to be increased by $ 40 . If the program could lose 400 subscribers thereafter and still collect the same revenue as it did before , how many subscribers did the magazine have last year ?",
+    "choices": [
+      "2000",
+      "2200",
+      "2400",
+      "2600",
+      "2900"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Assuming they had x subscribers last year\nthey earned x * 250\nafter the new tax law\nthey earned ( x - 400 ) * 290\nas per the question\n250 x = 290 x - 116000\nx = 116000 / 40\nx = 2900\nE\n#### E",
+    "final_answer": "E",
+    "answer_label": "E",
+    "answer_text": "2900",
+    "rationale": "Assuming they had x subscribers last year\nthey earned x * 250\nafter the new tax law\nthey earned ( x - 400 ) * 290\nas per the question\n250 x = 290 x - 116000\nx = 116000 / 40\nx = 2900\nE"
+  },
+  {
+    "id": 37,
+    "question": "On sports day , if 24 children were made to stand in a column , then 10 columns could be formed . If 240 children were made to stand in a column , then how many columns could be formed ?",
+    "choices": [
+      "20",
+      "40",
+      "60",
+      "80",
+      "100"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Each each child forms 10 / 24 of a column . Then , if there are 240 children , they could form 240 * 10 / 24 = 100 columns .\nAnswer is E\n#### E",
+    "final_answer": "E",
+    "answer_label": "E",
+    "answer_text": "100",
+    "rationale": "Each each child forms 10 / 24 of a column . Then , if there are 240 children , they could form 240 * 10 / 24 = 100 columns .\nAnswer is E"
+  },
+  {
+    "id": 38,
+    "question": "A banana costs Rs . 3 and an apple costs Rs . 4 . What will be the total cost of 4 dozen of apples and bananas ?",
+    "choices": [
+      "Rs . 216",
+      "Rs . 108",
+      "Rs . 225",
+      "Rs . 189",
+      "Rs . 336"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Total cost of 4 dozens of apples & bananas = 4 x 12 x ( 4 + 3 ) = Rs . 336\nANSWER : E\n#### E",
+    "final_answer": "E",
+    "answer_label": "E",
+    "answer_text": "Rs . 336",
+    "rationale": "Total cost of 4 dozens of apples & bananas = 4 x 12 x ( 4 + 3 ) = Rs . 336\nANSWER : E"
+  },
+  {
+    "id": 39,
+    "question": "In a poll of 45,000 dentists , only 30 percent responded ; of these , 20 percent claimed to prefer Toothpaste A . How many of the dentists who responded did not claim a preference for Toothpaste A ?",
+    "choices": [
+      "2,200",
+      "2,640",
+      "6,160",
+      "8,800",
+      "10,800"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Find those who responded to the poll -\n45000 x 3 / 10 = 4500 x 3 = 13500\nFind those who responded who do not prefer toothpaste A -\n13500 x 8 / 10 = 1350 x 8 = 10800\nANSWER : E\n#### E",
+    "final_answer": "E",
+    "answer_label": "E",
+    "answer_text": "10,800",
+    "rationale": "Find those who responded to the poll -\n45000 x 3 / 10 = 4500 x 3 = 13500\nFind those who responded who do not prefer toothpaste A -\n13500 x 8 / 10 = 1350 x 8 = 10800\nANSWER : E"
+  },
+  {
+    "id": 40,
+    "question": "Eesha has a wheat business . She purchases wheat from a local wholesaler of a particular cost per pound . The price of the wheat of her stores is $ 3 per kg . Her faulty spring balance reads 0.9 kg for a KG . Also in the festival season , she gives a 10 % discount on the wheat . She found that she made neither a profit nor a loss in the festival season . At what price did Eesha purchase the wheat from the wholesaler ?",
+    "choices": [
+      "$ 2.43",
+      "$ 2.49",
+      "$ 2.41",
+      "$ 2.45",
+      "$ 2.46"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Explanation : Faulty spring balance reads 0.9 kg for a kg ' ' means that she sells 1 kg for the price of 0.9 kgs , so she looses 10 % of the price because of the faulty spring balance . She looses another 10 % because of the discount .\nSo , she actually sells 1 kg for $ 3 × 0.9 × 0.9 = $ 2.43 $ 3 × 0.9 × 0.9 = $ 2.43 and since at that price she made neither a profit nor a loss , then Eesha purchase the wheat from the wholesaler for $ 2.43 .\nAnswer : A\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "$ 2.43",
+    "rationale": "Explanation : Faulty spring balance reads 0.9 kg for a kg ' ' means that she sells 1 kg for the price of 0.9 kgs , so she looses 10 % of the price because of the faulty spring balance . She looses another 10 % because of the discount .\nSo , she actually sells 1 kg for $ 3 × 0.9 × 0.9 = $ 2.43 $ 3 × 0.9 × 0.9 = $ 2.43 and since at that price she made neither a profit nor a loss , then Eesha purchase the wheat from the wholesaler for $ 2.43 .\nAnswer : A"
+  },
+  {
+    "id": 41,
+    "question": "A group of stock analysts had a contest . Each analyst picked 5 stocks out of a list of 30 stocks to purchase . If each of the stocks was picked exactly 6 times , how many analysts were in the contest ?",
+    "choices": [
+      "25",
+      "32",
+      "36",
+      "40",
+      "60"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "There were a total of 6 * 30 = 180 picks made by the analysts . Each analyst picked 5 stocks , so there were 180 / 5 = 36 analysts in the contest .\nC\n#### C",
+    "final_answer": "C",
+    "answer_label": "C",
+    "answer_text": "36",
+    "rationale": "There were a total of 6 * 30 = 180 picks made by the analysts . Each analyst picked 5 stocks , so there were 180 / 5 = 36 analysts in the contest .\nC"
+  },
+  {
+    "id": 42,
+    "question": "Tanya ' s grandfather was 8 times older to her 16 years ago . He would be 3 times of her age 8 years from now . What was ratio of ages of Tanya and her grandfather 8 years ago .",
+    "choices": [
+      "11 : 50",
+      "11 : 51",
+      "11 : 53",
+      "11 : 54",
+      "None of these"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Let , Tanya age 16 years ago = x ,\nGrandfather ' s age 16 years ago = 8 x .\n8 years from now , 3 ( x + 16 + 8 ) = ( 8 x + 16 + 8 )\n= > x = 48 / 5\n8 years ago ratio was :\n= > x + 8 / 8 x + 8 = 48 / 5 + 8 / 8 × 48 / 5 + 8\n= > 88 / 424 = 11 / 53\nOption C\n#### C",
+    "final_answer": "C",
+    "answer_label": "C",
+    "answer_text": "11 : 53",
+    "rationale": "Let , Tanya age 16 years ago = x ,\nGrandfather ' s age 16 years ago = 8 x .\n8 years from now , 3 ( x + 16 + 8 ) = ( 8 x + 16 + 8 )\n= > x = 48 / 5\n8 years ago ratio was :\n= > x + 8 / 8 x + 8 = 48 / 5 + 8 / 8 × 48 / 5 + 8\n= > 88 / 424 = 11 / 53\nOption C"
+  },
+  {
+    "id": 43,
+    "question": "Of two numbers , 4 times the smaller one is less then 3 times the larger one by 5 . If the sum of the numbers is larger than 6 times their difference by 6 , find the two numbers .",
+    "choices": [
+      "63 , 59",
+      "59 , 63",
+      "59 , 43",
+      "43 , 39",
+      "63 , 39"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Let the numbers be x and y , such that x > y\nThen , 3 x - 4 y = 5 . . . ( i ) and ( x + y ) - 6 ( x - y ) = 6\n= > - 5 x + 7 y = 6 … ( ii )\nSolving ( i ) and ( ii ) , we get : x = 59 and y = 43 .\nHence , the required numbers are 59 and 43 .\nAnswer C ) 59 , 43\n#### C",
+    "final_answer": "C",
+    "answer_label": "C",
+    "answer_text": "59 , 43",
+    "rationale": "Let the numbers be x and y , such that x > y\nThen , 3 x - 4 y = 5 . . . ( i ) and ( x + y ) - 6 ( x - y ) = 6\n= > - 5 x + 7 y = 6 … ( ii )\nSolving ( i ) and ( ii ) , we get : x = 59 and y = 43 .\nHence , the required numbers are 59 and 43 .\nAnswer C ) 59 , 43"
+  },
+  {
+    "id": 44,
+    "question": "A farming field can be ploughed by 6 tractors in 4 days . When 6 tractors work together , each of them ploughs 120 hectares a day . If two of the tractors were moved to another field , then the remaining 4 tractors could plough the same field in 5 days . How many hectares a day would one tractor plough then ?",
+    "choices": [
+      "324",
+      "377",
+      "136",
+      "144",
+      "222"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "If each of 66 tractors ploughed 120120 hectares a day and they finished the work in 44 days , then the whole field is : 120 ⋅ 6 ⋅ 4 = 720 ⋅ 4 = 2880120 ⋅ 6 ⋅ 4 = 720 ⋅ 4 = 2880 hectares . Let ' s suppose that each of the four tractors ploughed xx hectares a day . Therefore in 5 days they ploughed\n5 ⋅ 4 ⋅ x = 20 ⋅ x 5 ⋅ 4 ⋅ x = 20 ⋅ x hectares , which equals the area of the whole field , 2880 hectares .\nSo , we get 20 x = 288020 x = 2880\nx = 288020 = 144 x = 288020 = 144 . Hence , each of the four tractors would plough 144 hectares a day .\nAnswer : D\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "144",
+    "rationale": "If each of 66 tractors ploughed 120120 hectares a day and they finished the work in 44 days , then the whole field is : 120 ⋅ 6 ⋅ 4 = 720 ⋅ 4 = 2880120 ⋅ 6 ⋅ 4 = 720 ⋅ 4 = 2880 hectares . Let ' s suppose that each of the four tractors ploughed xx hectares a day . Therefore in 5 days they ploughed\n5 ⋅ 4 ⋅ x = 20 ⋅ x 5 ⋅ 4 ⋅ x = 20 ⋅ x hectares , which equals the area of the whole field , 2880 hectares .\nSo , we get 20 x = 288020 x = 2880\nx = 288020 = 144 x = 288020 = 144 . Hence , each of the four tractors would plough 144 hectares a day .\nAnswer : D"
+  },
+  {
+    "id": 45,
+    "question": "A cheerleading squad practices 1 hour a day from Monday through Thursday for a competition on Saturday . How many hours would they need to practice on Friday in order to have practiced an average of 2 hours a day over the 5 days from Monday through Friday ?",
+    "choices": [
+      "4",
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Total number of hours practice from Monday through Thursday : 4 * 1 = 4\ntotal number of hours they will need to practice to average 2 hours a day over 5 days : 5 * 2 = 10\nThus , they still need to practice 10 - 4 = 6 hours on Friday\nC\n#### C",
+    "final_answer": "C",
+    "answer_label": "C",
+    "answer_text": "6",
+    "rationale": "Total number of hours practice from Monday through Thursday : 4 * 1 = 4\ntotal number of hours they will need to practice to average 2 hours a day over 5 days : 5 * 2 = 10\nThus , they still need to practice 10 - 4 = 6 hours on Friday\nC"
+  },
+  {
+    "id": 46,
+    "question": "A salesman makes a 10 % commission on the selling price for each light switch he sells . If he sells 220 switches and the selling price of each switch is $ 6 , what is his total commission ?",
+    "choices": [
+      "66",
+      "88",
+      "100",
+      "120",
+      "132"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Commission per one switch : 6 * 0.10 = 0.60\nTotal commission = total switches sold * commission per switch = 220 * 0.60 = 132\nAnswer is E .\n#### E",
+    "final_answer": "E",
+    "answer_label": "E",
+    "answer_text": "132",
+    "rationale": "Commission per one switch : 6 * 0.10 = 0.60\nTotal commission = total switches sold * commission per switch = 220 * 0.60 = 132\nAnswer is E ."
+  },
+  {
+    "id": 47,
+    "question": "ABC company pays an average of $ 120 per vehicle each month in outdoor parking fees for three of its eight vehicles . The company pays garage parking fees for the remaining five vehicles . If ABC pays an average of $ 240 per vehicle overall each month for parking , how much does ABC pay per month in garage parking fees for its vehicles ?",
+    "choices": [
+      "300",
+      "420",
+      "912",
+      "1340",
+      "1500"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "This means it could go out sometimes and it could stay at the garage sometimes , thus the ABC company still has to pay fees for going - out cars in garage\nso the math will be 240 * 8 cars - 3 * 120 = 1340 fee for parking in garage .\nD\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "1340",
+    "rationale": "This means it could go out sometimes and it could stay at the garage sometimes , thus the ABC company still has to pay fees for going - out cars in garage\nso the math will be 240 * 8 cars - 3 * 120 = 1340 fee for parking in garage .\nD"
+  },
+  {
+    "id": 48,
+    "question": "The mean proportional between 45 and a certain number is three times the mean proportional between 5 and 22 . The number is ?",
+    "choices": [
+      "24",
+      "49",
+      "22",
+      "9",
+      "8"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "If X be the required number , then\n( 45 x X ) 1 / 2 = 3 x ( 5 x 22 ) 1 / 2\n45 X = 9 x 110\nX = 22\nANSWER : C\n#### C",
+    "final_answer": "C",
+    "answer_label": "C",
+    "answer_text": "22",
+    "rationale": "If X be the required number , then\n( 45 x X ) 1 / 2 = 3 x ( 5 x 22 ) 1 / 2\n45 X = 9 x 110\nX = 22\nANSWER : C"
+  },
+  {
+    "id": 49,
+    "question": "A circular gear with a diameter of 25 cm is mounted directly over another circular gear with a diameter of 100 cm . Both gears run on the same axle at their exact centers and each gear has a single notch at the 12 o ' clock position . At the same moment , the gears start to rotate at the same rate in cm / s , with the larger gear moving clockwise and the smaller gear moving anticlockwise .\nHow far in centimeters will the notch on the larger gear have moved the second time the notches pass each other ?",
+    "choices": [
+      "20 * pi",
+      "25 * pi",
+      "30 * pi",
+      "35 * pi",
+      "40 * pi"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "The large gear has a circumference that is 4 times the small gear .\nIf the rate in cm / s is equal , the small gear rotates 4 times as many degrees per second .\nThe first meeting happens when the small gear rotates 4 / 5 of a circle and the large gear rotates 1 / 5 of a circle . At the second meeting , the large gear will have rotated a total of 2 / 5 of a circle .\n2 / 5 * 2 * pi * R = 40 * pi centimeters .\nThe answer is E .\n#### E",
+    "final_answer": "E",
+    "answer_label": "E",
+    "answer_text": "40 * pi",
+    "rationale": "The large gear has a circumference that is 4 times the small gear .\nIf the rate in cm / s is equal , the small gear rotates 4 times as many degrees per second .\nThe first meeting happens when the small gear rotates 4 / 5 of a circle and the large gear rotates 1 / 5 of a circle . At the second meeting , the large gear will have rotated a total of 2 / 5 of a circle .\n2 / 5 * 2 * pi * R = 40 * pi centimeters .\nThe answer is E ."
+  },
+  {
+    "id": 50,
+    "question": "An engine of length 1000 m moving at 10 m / s . A bird is flying from the start of the engine to the end at x kmph and coming back at 2 x . Take total time of bird traveling as 187.5 seconds . Find x and 2 x",
+    "choices": [
+      "17.456 m / sec",
+      "18.456 m / sec",
+      "19.456 m / sec",
+      "27.456 m / sec",
+      "21.456 m / sec"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Suppose the bird ' s speed is s and 2 s .\nWhile flying at the same direction of the engine ' s movement , relative speed = ( s + 10 ) m / sec\non the reverse direction , relative speed = ( 2 s - 10 ) m / sec\nso\n1000 / ( s + 10 ) + 1000 / ( 2 s - 10 ) = 187.5 secs\nSolving it , we get s = 8.728 m / sec and 2 s = 17.456 m / sec\nANSWER : A\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "17.456 m / sec",
+    "rationale": "Suppose the bird ' s speed is s and 2 s .\nWhile flying at the same direction of the engine ' s movement , relative speed = ( s + 10 ) m / sec\non the reverse direction , relative speed = ( 2 s - 10 ) m / sec\nso\n1000 / ( s + 10 ) + 1000 / ( 2 s - 10 ) = 187.5 secs\nSolving it , we get s = 8.728 m / sec and 2 s = 17.456 m / sec\nANSWER : A"
+  },
+  {
+    "id": 51,
+    "question": "Two trains are running with speed 30 km / hr . and 58 km / hr . in the same direction . A man in the slower train passes the faster train in 18 seconds . The length ( in metres ) of the faster trains is :",
+    "choices": [
+      "70",
+      "100",
+      "128",
+      "140",
+      "None of these"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "The relative speed = 58 - 30 = 28 Km / hr . = 140 / 18 m / s .\nTherefore in 18 secs the faster train travels = ( 140 / 18 ) * 18 = 140\nAnswer D\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "140",
+    "rationale": "The relative speed = 58 - 30 = 28 Km / hr . = 140 / 18 m / s .\nTherefore in 18 secs the faster train travels = ( 140 / 18 ) * 18 = 140\nAnswer D"
+  },
+  {
+    "id": 52,
+    "question": "The promoters of the Springfield music festival estimated a 60 percent increase in ticket sales from last year , but because of bad weather , ticket sales actually decreased by 20 percent from last year ’ s level . What percent of the projected ticket sales were the actual ticket sales ?",
+    "choices": [
+      "40",
+      "50",
+      "60",
+      "70",
+      "80"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Assuming 100 tickets were sold last year , projected ticket sales this year = 160 ( 60 % increase )\nBut actual ticket sales = 80 ( 20 % decrease )\nNow x % 160 = 80 = > x = 50\nAnswer B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "50",
+    "rationale": "Assuming 100 tickets were sold last year , projected ticket sales this year = 160 ( 60 % increase )\nBut actual ticket sales = 80 ( 20 % decrease )\nNow x % 160 = 80 = > x = 50\nAnswer B"
+  },
+  {
+    "id": 53,
+    "question": "If the ratio of the ages of Maya and Chhaya is 6 : 5 at present , and fifteen years from now , the ratio will get changed to 9 : 8 , then find Maya ' s present age .",
+    "choices": [
+      "24 years",
+      "30 years",
+      "18 years",
+      "33 years",
+      "None"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Let Maya ' s and Chhaya ' s present age is 6 x and 5 x respectively .\nAnd ,\n( 6 x + 15 ) / ( 5 x + 15 ) = 9 / 8 ;\nOr , 48 x + 120 = 45 x = 135 ;\nOr , 3 x = 15 ;\nOr , x = 5 ;\nPresent age of Maya = 6 x = 30 .\nAnswer : Option B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "30 years",
+    "rationale": "Let Maya ' s and Chhaya ' s present age is 6 x and 5 x respectively .\nAnd ,\n( 6 x + 15 ) / ( 5 x + 15 ) = 9 / 8 ;\nOr , 48 x + 120 = 45 x = 135 ;\nOr , 3 x = 15 ;\nOr , x = 5 ;\nPresent age of Maya = 6 x = 30 .\nAnswer : Option B"
+  },
+  {
+    "id": 54,
+    "question": "Jay is selling his shoes and making a 15 % gain from it . His friend wants to buy them so he offers him a 5 % discount . At what price did Jay originally buy his shoes , if he sold it to his friend for $ 218.50 ?",
+    "choices": [
+      "$ 208.10",
+      "$ 198.50",
+      "$ 210.00",
+      "$ 200.00",
+      "$ 196.65"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "If the shoes were sold at $ 218.50 after a 5 % discount , they were originally 218.50 / 0.95 = 230\nIf at that price , Jay was making 15 % gains , the original price of the shoes was 230 / 1.15 = 200\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "$ 200.00",
+    "rationale": "If the shoes were sold at $ 218.50 after a 5 % discount , they were originally 218.50 / 0.95 = 230\nIf at that price , Jay was making 15 % gains , the original price of the shoes was 230 / 1.15 = 200"
+  },
+  {
+    "id": 55,
+    "question": "A sphere is surrounded by the smallest cylinder that will just contain it . Which of following is a complete set of the points where the cylinder touches the sphere ?\nI . One point ,\nII . Two points ,\nIII . A Circle",
+    "choices": [
+      "I only",
+      "II only",
+      "III only",
+      "I & III",
+      "II & III"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Explanations\n( 1 ) Let ’ s use the familiar reference points of Earth ’ s geography to talk about the sphere . The cylinder fits the sphere tightly , so it touches the sphere around its “ equator . ” The top of the cylinder touches the “ north pole ” of the sphere , and the bottom of the cylinder symmetrically touches the “ south pole ” of the sphere . That ’ s a circle ( the equator ) and two points ( the north & south poles ) . Answer E .\n#### E",
+    "final_answer": "E",
+    "answer_label": "E",
+    "answer_text": "II & III",
+    "rationale": "Explanations\n( 1 ) Let ’ s use the familiar reference points of Earth ’ s geography to talk about the sphere . The cylinder fits the sphere tightly , so it touches the sphere around its “ equator . ” The top of the cylinder touches the “ north pole ” of the sphere , and the bottom of the cylinder symmetrically touches the “ south pole ” of the sphere . That ’ s a circle ( the equator ) and two points ( the north & south poles ) . Answer E ."
+  },
+  {
+    "id": 56,
+    "question": "Marla starts running around a circular track at the same time Nick starts walking around the same circular track . Marla completes 32 laps around the track per hour and Nick completes 12 laps around the track per hour . How many minutes after Marla and Nick begin moving will Marla have completed 5 more laps around the track than Nick ?",
+    "choices": [
+      "5",
+      "8",
+      "12",
+      "15",
+      "20"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Marla runs 32 laps per hour = = > 0.53 laps per min\nNick runs 12 laps per hour = = > 0.2 laps per min\nfor every min Marla is taking 0.33 laps advantage\nthe time when Marla takes 5 laps advantage = = > 5 / 0.33 = 15.15 ~ 15\nAnswer D\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "15",
+    "rationale": "Marla runs 32 laps per hour = = > 0.53 laps per min\nNick runs 12 laps per hour = = > 0.2 laps per min\nfor every min Marla is taking 0.33 laps advantage\nthe time when Marla takes 5 laps advantage = = > 5 / 0.33 = 15.15 ~ 15\nAnswer D"
+  },
+  {
+    "id": 57,
+    "question": "The distance between Omaha and Lincoln is 60 miles . John drives a car that gets 30 miles per gallon of gas , and David drives a car that gets 20 miles per gallon . How many more gallons of gas does David use on a round trip from Omaha to Lincoln ?",
+    "choices": [
+      "2",
+      "3",
+      "4",
+      "5",
+      "6"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Ratio of John Car efficiency : David Car efficiency = 30 : 20\nRound trip takes 120 miles . Hence converting any one of the base for 120 = 180 : 120\nMeans if David travel 120 miles for the same gallons Omaha travled 180 miles . The gallon required to travel extra 60 miles is\nHence = 60 / 30 = 2\nAnswer : A\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "2",
+    "rationale": "Ratio of John Car efficiency : David Car efficiency = 30 : 20\nRound trip takes 120 miles . Hence converting any one of the base for 120 = 180 : 120\nMeans if David travel 120 miles for the same gallons Omaha travled 180 miles . The gallon required to travel extra 60 miles is\nHence = 60 / 30 = 2\nAnswer : A"
+  },
+  {
+    "id": 58,
+    "question": "Bert and Ernie are among 12 tenants on Sesame Street , from which 9 tenants are to be selected for the neighborhood watch . Of the different possible selections , how many contain neither Bert nor Ernie ?",
+    "choices": [
+      "1",
+      "3",
+      "9",
+      "10",
+      "12"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Removing Bert and Ernie the list will have 10 people\nQuestion now becomes choose 9 out of 10\n10 ! / 1 ! * 9 !\n= 10\nthere are 10 ways to do so .\nANS : D\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "10",
+    "rationale": "Removing Bert and Ernie the list will have 10 people\nQuestion now becomes choose 9 out of 10\n10 ! / 1 ! * 9 !\n= 10\nthere are 10 ways to do so .\nANS : D"
+  },
+  {
+    "id": 59,
+    "question": "In a mixture , the ratio of spirit and water is 3 : 2 . If the amount of spirit is 3 litre more than amount of water , calculate the amount of spirit in mixture ?",
+    "choices": [
+      "8",
+      "9",
+      "10",
+      "11",
+      "12"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Let amount of spirit be 3 x . and water = 2 x .\n3 x - 2 x = 3 . , x = 3\namount of spirit = 3 * 3 = 9 litre\nanswer B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "9",
+    "rationale": "Let amount of spirit be 3 x . and water = 2 x .\n3 x - 2 x = 3 . , x = 3\namount of spirit = 3 * 3 = 9 litre\nanswer B"
+  },
+  {
+    "id": 60,
+    "question": "In how many arrangements can you arrange 3 green cones and 3 blue cones in a line along the boundary of football ground if no two cones of the same color are to be adjacent ?",
+    "choices": [
+      "6",
+      "12",
+      "36",
+      "72",
+      "144"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "BGBGBG or GBGBGB - - > 2 ways ,\nBoth 3 B ' s and 3 G ' s can be arranged in 3 ! ways .\nThus total 2 * 3 ! * 3 ! = 72 .\nAnswer : D .\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "72",
+    "rationale": "BGBGBG or GBGBGB - - > 2 ways ,\nBoth 3 B ' s and 3 G ' s can be arranged in 3 ! ways .\nThus total 2 * 3 ! * 3 ! = 72 .\nAnswer : D ."
+  },
+  {
+    "id": 61,
+    "question": "In a very big class , 40 % of the students enrolled for Math and 70 % enrolled for Economics . If 15 % of the students enrolled for both Math and Economics , what % of the students of the class did not enroll for either of the two subjects ?",
+    "choices": [
+      "0 %",
+      "5 %",
+      "15 %",
+      "25 %",
+      "35 %"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Students enrolled for either Math or Economics = 40 + 70 - 15 = 95\nThat gives the answer : 100 - 95 = 5\nAnswer is B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "5 %",
+    "rationale": "Students enrolled for either Math or Economics = 40 + 70 - 15 = 95\nThat gives the answer : 100 - 95 = 5\nAnswer is B"
+  },
+  {
+    "id": 62,
+    "question": "Some students arranged picnic . The budget was Rs . 240 . Because four students of the group failed to go , the cost to each student was increased by Rs . 5 . How many students went for the picnic ?",
+    "choices": [
+      "12",
+      "13",
+      "14",
+      "15",
+      "16"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Let x = Total number of students\nAnd x - 4 = Number of students went for picnic .\nSo initial cost per student = Rs . 240 / x\n4 of students are failed to go , now cost per student = Rs . 240 / ( x - 4 )\nNow , [ 240 / ( x - 4 ) ] - [ 240 / x ] = 5\n240 / ( x - 4 ) = ( 240 + 5 x ) / x\nBy solving this , we get\n( x - 16 ) ( x + 12 ) = 0\nSo , x = 16 or x = - 12 . x can not be negative .\nSo , No . of students , X = 16\nANSWER : E\n#### E",
+    "final_answer": "E",
+    "answer_label": "E",
+    "answer_text": "16",
+    "rationale": "Let x = Total number of students\nAnd x - 4 = Number of students went for picnic .\nSo initial cost per student = Rs . 240 / x\n4 of students are failed to go , now cost per student = Rs . 240 / ( x - 4 )\nNow , [ 240 / ( x - 4 ) ] - [ 240 / x ] = 5\n240 / ( x - 4 ) = ( 240 + 5 x ) / x\nBy solving this , we get\n( x - 16 ) ( x + 12 ) = 0\nSo , x = 16 or x = - 12 . x can not be negative .\nSo , No . of students , X = 16\nANSWER : E"
+  },
+  {
+    "id": 63,
+    "question": "A car travels at a speed of x kilometers per p hours . How many meters will it travel in s seconds , in terms of s , p and x . ( xps ≠ 0 ; 1 kilometer = 1000 meters ) ?",
+    "choices": [
+      "sx / ( 3.6 p )",
+      "1000 xp / s",
+      "xp / s",
+      "60 xp / s",
+      "xp 3.6 * 10 ^ s"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Distance travelled = ( 1000 * x ) metres\nTime taken = s seconds = ( p * 3600 ) seconds\nTherefore 1 sec = ( 3600 p ) / s\nSpeed in metres / sec = ( 1000 x ) / ( 3600 p / s ) = ( sx / 3.6 p )\nAnswer : A\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "sx / ( 3.6 p )",
+    "rationale": "Distance travelled = ( 1000 * x ) metres\nTime taken = s seconds = ( p * 3600 ) seconds\nTherefore 1 sec = ( 3600 p ) / s\nSpeed in metres / sec = ( 1000 x ) / ( 3600 p / s ) = ( sx / 3.6 p )\nAnswer : A"
+  },
+  {
+    "id": 64,
+    "question": "The cost of Brand V paper is proportional to the weight . If 12 ounces of Brand V paper cost $ 12 , what is the cost of 16 ounces of Brand V paper ?",
+    "choices": [
+      "$ 18",
+      "$ 16",
+      "$ 15",
+      "$ 14",
+      "$ 20"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Let cost per ounce of Brand V paper = c\n12 c = 12\n= > c = 1\nTherefore\n= > 16 c = 16 * 1 = 16\nAnswer B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "$ 16",
+    "rationale": "Let cost per ounce of Brand V paper = c\n12 c = 12\n= > c = 1\nTherefore\n= > 16 c = 16 * 1 = 16\nAnswer B"
+  },
+  {
+    "id": 65,
+    "question": "Solution A has 5 % salt concentration and remaining water . After heating 50 litres of Solution A at a certain temperature , due to evaporation , the salt concentration increases to 10 % . The amount of water remaining in the solution would be",
+    "choices": [
+      "30 litres",
+      "27 litres",
+      "25 litres",
+      "22.5 litres",
+      "20 litres"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Before Evaporation :\nSalt : 5 % of 50 litre = 2.5 litre\nWater : 95 % of 50 litre = 47.5 litre\nAfter Evaporation :\nSalt concentration is 10 % . Now the salt content will not change after evaporation . So 2.5 litre = 10 % of 25 litre .\nHence , remaining water = 25 litre - 2.5 litre = 22.5 litre\nAnswer is D\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "22.5 litres",
+    "rationale": "Before Evaporation :\nSalt : 5 % of 50 litre = 2.5 litre\nWater : 95 % of 50 litre = 47.5 litre\nAfter Evaporation :\nSalt concentration is 10 % . Now the salt content will not change after evaporation . So 2.5 litre = 10 % of 25 litre .\nHence , remaining water = 25 litre - 2.5 litre = 22.5 litre\nAnswer is D"
+  },
+  {
+    "id": 66,
+    "question": "Last year Joe grew 2 inch and Sally grew 200 percent more than Joe grew . How many inches did Sally grow last year ?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Sally grows 200 % more than Joe grew . Joe grew 2 inch .\nSally grew ( 200 / 100 ) * 1 = 4 inches .\nE is the answer .\n#### E",
+    "final_answer": "E",
+    "answer_label": "E",
+    "answer_text": "4",
+    "rationale": "Sally grows 200 % more than Joe grew . Joe grew 2 inch .\nSally grew ( 200 / 100 ) * 1 = 4 inches .\nE is the answer ."
+  },
+  {
+    "id": 67,
+    "question": "A car is moving at the speed of 60 km per one hour . What is the time elapsed after traveling 130 km ?",
+    "choices": [
+      "2.16 hr",
+      "1.25 hr",
+      "1.5 hr",
+      "1.75 hr",
+      "2 hr"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "The speed of the car is 60 km / hr . The speed - distance - time relation is v = x \\ t , where x is the distance traveled , t is the time elapsed , and v is the speed of the car . Plug the distance 130 and speed of 80 in this relation and get t .\nt = x / v = 130 / 60 = 2.16 hr\nSo the correct option is A\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "2.16 hr",
+    "rationale": "The speed of the car is 60 km / hr . The speed - distance - time relation is v = x \\ t , where x is the distance traveled , t is the time elapsed , and v is the speed of the car . Plug the distance 130 and speed of 80 in this relation and get t .\nt = x / v = 130 / 60 = 2.16 hr\nSo the correct option is A"
+  },
+  {
+    "id": 68,
+    "question": "At an amusement park , tom bought a number of red tokens and green tokens . Each red token costs $ 0.05 , and each green token costs $ 0.14 . If Tom spent a total of exactly $ 2.06 , how many token in total did Tom buy ?",
+    "choices": [
+      "216",
+      "27",
+      "28",
+      "34",
+      "20"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Given :\n0.05 R + 0.14 G = 2.06 ;\n5 R + 14 G = 206 .\nNow , it ' s special type of equations as G and R must be a non - negative integers , so there might be only one solution to it . After some trial and error you ' ll get ( actually there are several ways of doing it ) :\nR = 30 and G = 4 ;\nR + G = 34 .\nAnswer : D .\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "34",
+    "rationale": "Given :\n0.05 R + 0.14 G = 2.06 ;\n5 R + 14 G = 206 .\nNow , it ' s special type of equations as G and R must be a non - negative integers , so there might be only one solution to it . After some trial and error you ' ll get ( actually there are several ways of doing it ) :\nR = 30 and G = 4 ;\nR + G = 34 .\nAnswer : D ."
+  },
+  {
+    "id": 69,
+    "question": "If P represents a single digit in the four digit number x = 18 P 6 , how many different values of P are there such that x is divisible by 8 ?",
+    "choices": [
+      "0",
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "1600 is divisible by 8 , so 1600 + 200 = 1800 is also divisible by 8 .\nThen the values we are looking for are 1816 , 1856 , and 1896 .\nThe answer is D .\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "3",
+    "rationale": "1600 is divisible by 8 , so 1600 + 200 = 1800 is also divisible by 8 .\nThen the values we are looking for are 1816 , 1856 , and 1896 .\nThe answer is D ."
+  },
+  {
+    "id": 70,
+    "question": "A rectangle has twice the area of a square . The length of the rectangle is 14 cm greater than that side of the square whereas breadth is equal to side of the square . Find the perimeter of the square ?",
+    "choices": [
+      "34",
+      "38",
+      "56",
+      "28",
+      "19"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Let side of square be x .\nThen for rectangle length = 14 + x and breadth = x .\nIt is given\nArea of rectangle = 2 × ( area of square )\nlength × breadth = 2 ( x × x )\n( x + 14 ) × x = 2 × x 2\nx 2 + 14 x = 2 x 2\nx 2 = 14 x\nx = 14 .\nPerimeter of square = 4 × x = 56\nAnswer : C\n#### C",
+    "final_answer": "C",
+    "answer_label": "C",
+    "answer_text": "56",
+    "rationale": "Let side of square be x .\nThen for rectangle length = 14 + x and breadth = x .\nIt is given\nArea of rectangle = 2 × ( area of square )\nlength × breadth = 2 ( x × x )\n( x + 14 ) × x = 2 × x 2\nx 2 + 14 x = 2 x 2\nx 2 = 14 x\nx = 14 .\nPerimeter of square = 4 × x = 56\nAnswer : C"
+  },
+  {
+    "id": 71,
+    "question": "Every day a cyclist meets a train at a particular crossing . The road is straight before the crossing and both are travelling in the same direction . The cyclist travels with a speed of 10 kmph . One day the cyclist comes late by 25 min and meets the train 5 km before the crossing . What is the speed of the train ?",
+    "choices": [
+      "60 kmph",
+      "65 kmph",
+      "68 kmph",
+      "70 kmph",
+      "80 kmph"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Speed of the train = 60 km / hr .\nSpeed of Cyclist travel = 10 km / hr .\nIt means , Cyclist travels 5 km in 30 minutes .\nIf Cyclist comes late by 25 min and meets the train 5 km before the crossing means , it shows\nTrain can travel 5 Kms in 5 minutes .\nSo , speed of train is ( 5 km / 5 min ) = 1 km / 1 min = 60 km per hour .\nANSWER : A\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "60 kmph",
+    "rationale": "Speed of the train = 60 km / hr .\nSpeed of Cyclist travel = 10 km / hr .\nIt means , Cyclist travels 5 km in 30 minutes .\nIf Cyclist comes late by 25 min and meets the train 5 km before the crossing means , it shows\nTrain can travel 5 Kms in 5 minutes .\nSo , speed of train is ( 5 km / 5 min ) = 1 km / 1 min = 60 km per hour .\nANSWER : A"
+  },
+  {
+    "id": 72,
+    "question": "A certain business printer can print 100 characters per second , which is 5 times faster than an average printer . If an average printer can print 4 times faster than an electric typewriter , how many characters per minute can an electric typewriter print ?",
+    "choices": [
+      "300",
+      "350",
+      "200",
+      "250",
+      "400"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Rate at which a business printer can print = 100 characters per second\nRate at which an average printer can print = ( 100 / 5 ) characters per second = 20 characters per second\nAverage printer ' s rate = 4 * Electric typewriter ' s rate\n= > Electric typewriter ' s rate = 20 / 4 = 5 characters per second = 5 * 60 characters per minute = 300 characters per minute\nAnswer A\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "300",
+    "rationale": "Rate at which a business printer can print = 100 characters per second\nRate at which an average printer can print = ( 100 / 5 ) characters per second = 20 characters per second\nAverage printer ' s rate = 4 * Electric typewriter ' s rate\n= > Electric typewriter ' s rate = 20 / 4 = 5 characters per second = 5 * 60 characters per minute = 300 characters per minute\nAnswer A"
+  },
+  {
+    "id": 73,
+    "question": "A sink contains exactly 11 liters of water . If water is drained from the sink until it holds exactly 5 liters of water less than the quantity drained away , how many liters of water were drained away ?",
+    "choices": [
+      "2",
+      "3",
+      "4.5",
+      "8",
+      "9"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Drained water - D\nHolded water = D - 5\nTotal water = Drained + Holded = D + D - 5 = 11\n2 D = 16\nD = 8\nSo answer is D\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "8",
+    "rationale": "Drained water - D\nHolded water = D - 5\nTotal water = Drained + Holded = D + D - 5 = 11\n2 D = 16\nD = 8\nSo answer is D"
+  },
+  {
+    "id": 74,
+    "question": "One day in December 2015 , three 2 - digit prime numbers A , B and C , were\ngiven to three members of a High School math team : Ashley , Beth , and Caitlin ( respectively ) .\nThey had this conversation :\nAshley : \\ If you two add your numbers , we get precisely today ' s date ! ' '\nBeth : \\ If you two add your numbers , we get my birthday this month , which was before today . ' '\nCaitlin : \\ If you two add your numbers , we get my birthday this month , which is after today . ' '\nWhat number did Caitlin get ?",
+    "choices": [
+      "11",
+      "13",
+      "17",
+      "19",
+      "23"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "The numbers A , B , C belong a priori in the set f 11 ; 13 ; 17 ; 19 g | Note that the\naddition of any of these two 2 - digit prime numbers can not be greater than or equal to 30 ,\nwhich places a strong restriction on the greatest of the three numbers : this must be at most\n19 . These are the only valid additions of any two numbers on that set :\n11 + 11 = 22 , 11 + 13 = 24 , 11 + 17 = 29 , 11 + 19 = 30 , 13 + 13 = 26 , 13 + 17 = 30\nNote in particular the strict inequalities placed on the addition of any of these two numbers :\n22 _ < A + C < B + C < A + B _ < 30\nSince C < B , there are only two possibilities for B + C at this point : B = 13 , C = 11 , B + C =\n24 , or B = 17 , C = 11 , B + C = 29 .\ncorrect answer A\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "11",
+    "rationale": "The numbers A , B , C belong a priori in the set f 11 ; 13 ; 17 ; 19 g | Note that the\naddition of any of these two 2 - digit prime numbers can not be greater than or equal to 30 ,\nwhich places a strong restriction on the greatest of the three numbers : this must be at most\n19 . These are the only valid additions of any two numbers on that set :\n11 + 11 = 22 , 11 + 13 = 24 , 11 + 17 = 29 , 11 + 19 = 30 , 13 + 13 = 26 , 13 + 17 = 30\nNote in particular the strict inequalities placed on the addition of any of these two numbers :\n22 _ < A + C < B + C < A + B _ < 30\nSince C < B , there are only two possibilities for B + C at this point : B = 13 , C = 11 , B + C =\n24 , or B = 17 , C = 11 , B + C = 29 .\ncorrect answer A"
+  },
+  {
+    "id": 75,
+    "question": "At a company meeting , M men and W women meet in a conference room . If the ratio of men to women is 2 : 3 at the meeting and the conference room can hold no more than 64 people , then what is the maximum number of women who can be at the meeting ?",
+    "choices": [
+      "35",
+      "36",
+      "37",
+      "38",
+      "39"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "M = 2 W / 3\nW + M = 5 W / 3 < = 64\nW < = 38.4\nIf W = 38 , then M = 25.3 ( inadmissible )\nIf W = 37 , then M = 24.7 ( inadmissible )\nThen W = 36 and M = 24 .\nThe answer is B .\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "36",
+    "rationale": "M = 2 W / 3\nW + M = 5 W / 3 < = 64\nW < = 38.4\nIf W = 38 , then M = 25.3 ( inadmissible )\nIf W = 37 , then M = 24.7 ( inadmissible )\nThen W = 36 and M = 24 .\nThe answer is B ."
+  },
+  {
+    "id": 76,
+    "question": "Money is paid into an account in portions of $ 500 and paid out in portions of $ 300 . If after a month the account grew by $ 1,200 , what is the least possible number of transactions that could have been made ?",
+    "choices": [
+      "3",
+      "4",
+      "5",
+      "6",
+      "7"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "The least number of transactions is 4 : $ 500 + $ 500 + $ 500 − $ 300 = $ 1,200\nAnswer : B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "4",
+    "rationale": "The least number of transactions is 4 : $ 500 + $ 500 + $ 500 − $ 300 = $ 1,200\nAnswer : B"
+  },
+  {
+    "id": 77,
+    "question": "3 men and 3 women need to be seated in 2 rows with 3 chairs in each row . All men have to be seated in the back row . How many ways can this be done ?",
+    "choices": [
+      "6",
+      "12",
+      "24",
+      "36",
+      "72"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "For one particular arrangement of men , say { m 1 , m 2 , m 3 } women in the front row can be arranged in 3 ! = 6 ways , as total # of arrangements of men is 3 ! = 6 then total # of arrangements of men and women is 3 ! * 3 ! = 36 .\nANS : D\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "36",
+    "rationale": "For one particular arrangement of men , say { m 1 , m 2 , m 3 } women in the front row can be arranged in 3 ! = 6 ways , as total # of arrangements of men is 3 ! = 6 then total # of arrangements of men and women is 3 ! * 3 ! = 36 .\nANS : D"
+  },
+  {
+    "id": 78,
+    "question": "A girl counted in the following way on the fingers of her left hand : She started by calling the thumb 1 , the index finger 2 , middle finger 3 , ring finger 4 , little finger 5 and then reversed direction calling the ring finger 6 , middle finger 7 and so on . She counted upto 1994 . She ended counting on which finger ?",
+    "choices": [
+      "Thumb",
+      "Index finger",
+      "Middle finger",
+      "Ring finger",
+      "none"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "while counting the numbers associated to the thumb will be 1,9 , 17,25 , . . . . . . . . .\ni . e . , numbers of the form ( 8 n + 1 ) .\nwhere n = 1 , 2,3 . . .\nSince 1994 = 249 × 8 + 2 , so 1993 shall correspond to the thumb and 1994 to the index finger .\nANSWER : B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "Index finger",
+    "rationale": "while counting the numbers associated to the thumb will be 1,9 , 17,25 , . . . . . . . . .\ni . e . , numbers of the form ( 8 n + 1 ) .\nwhere n = 1 , 2,3 . . .\nSince 1994 = 249 × 8 + 2 , so 1993 shall correspond to the thumb and 1994 to the index finger .\nANSWER : B"
+  },
+  {
+    "id": 79,
+    "question": "A man buys a watch for Rs . 1950 in cash and sells it for Rs . 2200 on credit of 1 year . If the rate of interest is 10 % per annum , the man :",
+    "choices": [
+      "gains Rs . 55",
+      "gains Rs . 50",
+      "loses Rs . 30",
+      "gains Rs . 30",
+      "None of these"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Explanation :\nS . P . = P . W . of Rs . 2200 due in 1 year . Thus ,\n= Rs . [ 2200 × 100 / 100 + ( 10 × 1 ) ]\n= Rs . 2000 .\nGain = Rs . ( 2000 - 1950 ) = Rs . 50 .\nAnswer : B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "gains Rs . 50",
+    "rationale": "Explanation :\nS . P . = P . W . of Rs . 2200 due in 1 year . Thus ,\n= Rs . [ 2200 × 100 / 100 + ( 10 × 1 ) ]\n= Rs . 2000 .\nGain = Rs . ( 2000 - 1950 ) = Rs . 50 .\nAnswer : B"
+  },
+  {
+    "id": 80,
+    "question": "If a rectangular box has two faces with an area of 25 , two faces of area 50 , and two faces of area 72 , what is its volume ?",
+    "choices": [
+      "60",
+      "90",
+      "162",
+      "300",
+      "360"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Width * Depth = 25 ;\nWidth * Height = 50 ;\nDepth * Height = 72 .\nMultiply : ( Width * Depth * Height ) ^ 2\n= Volume ^ 2 = 25 * 50 * 72\nvolume = 300 .\nAnswer : D .\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "300",
+    "rationale": "Width * Depth = 25 ;\nWidth * Height = 50 ;\nDepth * Height = 72 .\nMultiply : ( Width * Depth * Height ) ^ 2\n= Volume ^ 2 = 25 * 50 * 72\nvolume = 300 .\nAnswer : D ."
+  },
+  {
+    "id": 81,
+    "question": "A merchant has three different types of milk : 435 liters , 493 liters and 551 liters . Find the least number of casks of equal size required to store all the milk without mixing .",
+    "choices": [
+      "51",
+      "61",
+      "47",
+      "45",
+      "53"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "HCF of 435 , 493 , 551 = 29\n( 453 / 29 ) + ( 493 / 29 ) + ( 551 / 29 ) = 51\nANSWER : A\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "51",
+    "rationale": "HCF of 435 , 493 , 551 = 29\n( 453 / 29 ) + ( 493 / 29 ) + ( 551 / 29 ) = 51\nANSWER : A"
+  },
+  {
+    "id": 82,
+    "question": "A , B and C are three contestants in a 1000 m race . If A finishes the race 40 m ahead of B and 64 m ahead of C , how much did each of them cover at that time ?",
+    "choices": [
+      "When B covers 890 m , C covers 866 m .",
+      "When B covers 860 m , C covers 836 m .",
+      "When B covers 930 m , C covers 906 m .",
+      "When B covers 960 m , C covers 936 m .",
+      "When B covers 990 m , C covers 966 m ."
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "While A covers 1000 m , B covers ( 1000 - 40 ) m = 960 m and\nC covers ( 1000 - 64 ) m or 936 m .\nAnswer is D .\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "When B covers 960 m , C covers 936 m .",
+    "rationale": "While A covers 1000 m , B covers ( 1000 - 40 ) m = 960 m and\nC covers ( 1000 - 64 ) m or 936 m .\nAnswer is D ."
+  },
+  {
+    "id": 83,
+    "question": "In tennis , service alternates for each game between the two players and the first player to win 6 games wins . A player winning 6 - 2 indicates that 8 games were played , of which the winning player won 6 and the losing player won 2 . Rafa beat Roger in a set of tennis , winning six games to Roger ’ s three . Five games were won by the playerwho did not serve . Who served first ?",
+    "choices": [
+      "Rafa",
+      "Roger",
+      "Inconsistent data",
+      "Indeterminate",
+      "none of these"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "As its 6 - 3 , totally 9 games were played .\nRafa served first so he served 5 games among which 2 were won by Roger .\nRoger served second so he served 4 games among which 3 were won by Rafa .\nSo , totally 5 games were won by the player who did not serve .\nAlso Rafa won 6 - > 3 from his serve and 3 from Roger ' s serve .\nRoger won 3 - > 1 from his serve and 2 from Rafa ' s serve .\nANSWER : A\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "Rafa",
+    "rationale": "As its 6 - 3 , totally 9 games were played .\nRafa served first so he served 5 games among which 2 were won by Roger .\nRoger served second so he served 4 games among which 3 were won by Rafa .\nSo , totally 5 games were won by the player who did not serve .\nAlso Rafa won 6 - > 3 from his serve and 3 from Roger ' s serve .\nRoger won 3 - > 1 from his serve and 2 from Rafa ' s serve .\nANSWER : A"
+  },
+  {
+    "id": 84,
+    "question": "Divide Rs . 32000 in the ratio 3 : 5 ?",
+    "choices": [
+      "12000,20000",
+      "18000,14000",
+      "30000,2000",
+      "4000,20000",
+      "20000,12000"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "3 / 8 * 32000 = 12000\n5 / 8 * 32000 = 20000\nAnswer : Option A\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "12000,20000",
+    "rationale": "3 / 8 * 32000 = 12000\n5 / 8 * 32000 = 20000\nAnswer : Option A"
+  },
+  {
+    "id": 85,
+    "question": "Ram has 12 pennies . He lost 5 of his pennies , how many does he have now ?",
+    "choices": [
+      "3",
+      "15",
+      "7",
+      "8",
+      "9"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "If Ram starts with 12 pennies and loses 5 , he will have 7 pennies left\n12 - 5 = 7 C\n#### C",
+    "final_answer": "C",
+    "answer_label": "C",
+    "answer_text": "7",
+    "rationale": "If Ram starts with 12 pennies and loses 5 , he will have 7 pennies left\n12 - 5 = 7 C"
+  },
+  {
+    "id": 86,
+    "question": "How many hand shakes will be there , if 8 people shake hands with every other person in the room ?",
+    "choices": [
+      "26",
+      "27",
+      "28",
+      "29",
+      "30"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "No . of handshakes is n ( n - 1 ) / 2\n= > 8 ( 8 - 1 ) / 2 = = 28\ntotal no . of handshakes is 28\nANSWER : C\n#### C",
+    "final_answer": "C",
+    "answer_label": "C",
+    "answer_text": "28",
+    "rationale": "No . of handshakes is n ( n - 1 ) / 2\n= > 8 ( 8 - 1 ) / 2 = = 28\ntotal no . of handshakes is 28\nANSWER : C"
+  },
+  {
+    "id": 87,
+    "question": "In the xy - coordinate plane , which of the following points must lie on the line kx + 2 y = 6 for every possible value of k ?",
+    "choices": [
+      "( 1,1 )",
+      "( 0,3 )",
+      "( 2,0 )",
+      "( 3,6 )",
+      "( 6,3 )"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "For a point to satisfy the given equation for all possible values of k , then x must equal 0 .\nWhen x = 0 , the equation is simply 2 y = 6 , and then y = 3 .\nThe answer is B .\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "( 0,3 )",
+    "rationale": "For a point to satisfy the given equation for all possible values of k , then x must equal 0 .\nWhen x = 0 , the equation is simply 2 y = 6 , and then y = 3 .\nThe answer is B ."
+  },
+  {
+    "id": 88,
+    "question": "In how many ways to choose a group of 3 people from 6 couples so that no couple is chosen",
+    "choices": [
+      "60",
+      "120",
+      "140",
+      "160",
+      "180"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Number of ways 3 people can be chosen from 12 = 12 C 3 = 220\nNumber of ways a couple can be chosen = 6\nNumber of ways the third person can be chosen = 10 C 1 = 10\nHence , total number of ways a couple with another person can be chosen = 6 * 10 = 60\nTherefore , total number of ways a couple can not be chosen = 220 - 60 = 160\nANSWER : D\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "160",
+    "rationale": "Number of ways 3 people can be chosen from 12 = 12 C 3 = 220\nNumber of ways a couple can be chosen = 6\nNumber of ways the third person can be chosen = 10 C 1 = 10\nHence , total number of ways a couple with another person can be chosen = 6 * 10 = 60\nTherefore , total number of ways a couple can not be chosen = 220 - 60 = 160\nANSWER : D"
+  },
+  {
+    "id": 89,
+    "question": "The steamer going upstream would cover the distance between Town A and Town B in 5 hours . The same steamer going downstream would cover the distance between the towns in 3 hours . How long would it take a raft moving at the speed of the current to float from B to A ?",
+    "choices": [
+      "10 hours",
+      "12 hours",
+      "15 hours",
+      "18 hours",
+      "20 hours"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Let D be the distance , let V be the speed of the steamer , and let x be the speed of the current .\nD / ( V + x ) = 3\nD / ( V - x ) = 5\n3 V + 3 x = 5 V - 5 x\nV = 4 x\nD / ( 4 x + x ) = 3\nD / x = 15 hours\nThe answer is C .\n#### C",
+    "final_answer": "C",
+    "answer_label": "C",
+    "answer_text": "15 hours",
+    "rationale": "Let D be the distance , let V be the speed of the steamer , and let x be the speed of the current .\nD / ( V + x ) = 3\nD / ( V - x ) = 5\n3 V + 3 x = 5 V - 5 x\nV = 4 x\nD / ( 4 x + x ) = 3\nD / x = 15 hours\nThe answer is C ."
+  },
+  {
+    "id": 90,
+    "question": "An engineering student has to secure 36 % marks to pass . He gets 130 marks and fails by 14 marks . The maximum number of marks obtained by him is ?",
+    "choices": [
+      "881",
+      "400",
+      "778",
+      "566",
+      "281"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "130\n14\n- - - - - - -\n361 - - - - - - 144\n100 % - - - - - - ? = > 400\nAnswer : B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "400",
+    "rationale": "130\n14\n- - - - - - -\n361 - - - - - - 144\n100 % - - - - - - ? = > 400\nAnswer : B"
+  },
+  {
+    "id": 91,
+    "question": "Of the new vehicles registered in a week , 300 were neither SUVs nor were they powered by diesel . 3 / 4 th of the SUVs registered were diesel powered and there were half as many SUVs as there were non SUVs . If SUVs not powered by diesel were a sixth of non SUVs not powered by diesel , how many vehicles V registered in the week were powered by diesel ?",
+    "choices": [
+      "50",
+      "150",
+      "200",
+      "250",
+      "400"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Supposing that ' x ' is the number of vehicles of SUV .\n0.25 * x = non diesel SUV\n0.75 * x = diesel SUV\n0.5 * x = only diesel\nBy supposition ,\n0.25 * x = 1 / 6 * 300\n= > x = 200\nTherefore , number of vehicles powered by diesel is V = 150 + 100 = 250 = D\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "250",
+    "rationale": "Supposing that ' x ' is the number of vehicles of SUV .\n0.25 * x = non diesel SUV\n0.75 * x = diesel SUV\n0.5 * x = only diesel\nBy supposition ,\n0.25 * x = 1 / 6 * 300\n= > x = 200\nTherefore , number of vehicles powered by diesel is V = 150 + 100 = 250 = D"
+  },
+  {
+    "id": 92,
+    "question": "A bakery has 4 varieties of pastries . Each variety is having many number of pastry . I want to purchase of 10 pastries such that I get to taste each variety . How many ways to purchase ?",
+    "choices": [
+      "72",
+      "65",
+      "84",
+      "59",
+      "91"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "no . of varieties = 4\nLet they are A , B , C , D\nRequired answer is 9 C 3 = 9 ! / 6 ! * 3 ! = 84\nAnswer is C\n#### C",
+    "final_answer": "C",
+    "answer_label": "C",
+    "answer_text": "84",
+    "rationale": "no . of varieties = 4\nLet they are A , B , C , D\nRequired answer is 9 C 3 = 9 ! / 6 ! * 3 ! = 84\nAnswer is C"
+  },
+  {
+    "id": 93,
+    "question": "Equal quantities of three mixtures of milk and water are mixed in the ratio 1 : 2 , 2 : 3 and 3 : 4 . The ratio of water and milk in the mixture is :",
+    "choices": [
+      "193 : 122",
+      "61 : 97",
+      "137 : 178",
+      "122 : 193",
+      "122 : 195"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "( 1 : 2 ) , ( 2 : 3 ) , ( 3 : 4 )\n( 1 + 2 ) , ( 2 + 3 ) , ( 3 + 4 )\n3 , 5,7\nequal quantities of mixture i . e . lcm of 3 , 5,7 = 105\n105 / 3 = 35 , 105 / 5 = 21 , 105 / 7 = 15\n( 35 * 1,35 * 2 ) , ( 21 * 2,21 * 3 ) , ( 15 * 3,15 * 4 )\n( 35,70 ) , ( 42,63 ) , ( 45,60 )\nso overall mixture ratio is\n35 + 42 + 45 : 70 + 63 + 60\n122 : 193\nANSWER : D\n#### D",
+    "final_answer": "D",
+    "answer_label": "D",
+    "answer_text": "122 : 193",
+    "rationale": "( 1 : 2 ) , ( 2 : 3 ) , ( 3 : 4 )\n( 1 + 2 ) , ( 2 + 3 ) , ( 3 + 4 )\n3 , 5,7\nequal quantities of mixture i . e . lcm of 3 , 5,7 = 105\n105 / 3 = 35 , 105 / 5 = 21 , 105 / 7 = 15\n( 35 * 1,35 * 2 ) , ( 21 * 2,21 * 3 ) , ( 15 * 3,15 * 4 )\n( 35,70 ) , ( 42,63 ) , ( 45,60 )\nso overall mixture ratio is\n35 + 42 + 45 : 70 + 63 + 60\n122 : 193\nANSWER : D"
+  },
+  {
+    "id": 94,
+    "question": "In a city , 20 % of the population travels by car , 50 % travels by bus and 10 % travels by both car and bus . Then , the percentage of the population that travels by either car or bus is . . .",
+    "choices": [
+      "40 %",
+      "50 %",
+      "60 %",
+      "70 %",
+      "80 %"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "According to the problem ,\np ( car ) = 20 % = 1 / 5\np ( bus ) = 50 % = 1 / 2\np ( car ∩ bus ) = 10 % = 1 / 10\nSince p ( car u bus ) = p ( car ) + p ( bus ) - p ( car n bus )\np ( car ∪ bus ) = 1 / 5 + 1 / 2 - 1 / 10 = 3 / 5 = 60 %\nANSWER : C\n#### C",
+    "final_answer": "C",
+    "answer_label": "C",
+    "answer_text": "60 %",
+    "rationale": "According to the problem ,\np ( car ) = 20 % = 1 / 5\np ( bus ) = 50 % = 1 / 2\np ( car ∩ bus ) = 10 % = 1 / 10\nSince p ( car u bus ) = p ( car ) + p ( bus ) - p ( car n bus )\np ( car ∪ bus ) = 1 / 5 + 1 / 2 - 1 / 10 = 3 / 5 = 60 %\nANSWER : C"
+  },
+  {
+    "id": 95,
+    "question": "Two trains under a controlled experiment begin at a speed of 100 mph in the opposite direction in a tunnel . A supersonic bee is left in the tunnel which can fly at a speed of 1000 mph . The tunnel is 200 miles long . When the trains start running on a constant speed of 100 mph , the supersonic bee starts flying from one train towards the other . As soon as the bee reaches the second train , it starts flying back towards the first train .\nIf the bee keeps flying to and fro in the tunnel till the trains collide , how much distance will it have covered in total ?",
+    "choices": [
+      "1000 miles .",
+      "2000 miles .",
+      "3000 miles .",
+      "4000 miles .",
+      "5000 miles ."
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Solution :\nA typical way will be to start thinking about summing up the distance that the bee will travel but that will be quite a tedious task . How about we offer you a much easy solution ?\nThe tunnel is 200 miles long and the trains are running at as peed of 100 mph which means that they will collide exactly at the center of the tunnel and seeking their speed , they will collide after an hour .\nNow consider the bee which is flying at a speed of 1000 mph and will keep flying till the train collides . As calculated , it will keep flying for an hour which means the distance that it will cover is 1000 miles .\nAnswer A\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "1000 miles .",
+    "rationale": "Solution :\nA typical way will be to start thinking about summing up the distance that the bee will travel but that will be quite a tedious task . How about we offer you a much easy solution ?\nThe tunnel is 200 miles long and the trains are running at as peed of 100 mph which means that they will collide exactly at the center of the tunnel and seeking their speed , they will collide after an hour .\nNow consider the bee which is flying at a speed of 1000 mph and will keep flying till the train collides . As calculated , it will keep flying for an hour which means the distance that it will cover is 1000 miles .\nAnswer A"
+  },
+  {
+    "id": 96,
+    "question": "At a casino , gamblers spin a number - wheel containing positive , two - digit numbers . If the gambler bets on a prime number , he / she will win 2 times their bet , if the wheel shows that number . If the gambler bets on a non - prime number , he / she only wins half their bet , if the wheel shows that number . If a gambler won $ 100 , which of the choices is possible ?\nI . bet $ 50 on 11\nII . bet $ 50 on 21\nIII . bet $ 200 on 89",
+    "choices": [
+      "I only",
+      "II only",
+      "III only",
+      "I and II only",
+      "I , II and III"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "There are only 3 possibilities to choose from , so\nI . is possible ( 11 is prime ) $ 50 X 2 = $ 100\nII . is NOT possible ( 21 is not prime ) $ 50 / 2 = $ 25\nIII . is NOT possible ( 81 is prime ) $ 200 X 2 = $ 400\nAnswer : A\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "I only",
+    "rationale": "There are only 3 possibilities to choose from , so\nI . is possible ( 11 is prime ) $ 50 X 2 = $ 100\nII . is NOT possible ( 21 is not prime ) $ 50 / 2 = $ 25\nIII . is NOT possible ( 81 is prime ) $ 200 X 2 = $ 400\nAnswer : A"
+  },
+  {
+    "id": 97,
+    "question": "If the ratio of age of mother and son 3 : 5 , and the mother is 12 years old , then what will be the age of son ?",
+    "choices": [
+      "20.0",
+      "21.1",
+      "10.1",
+      "15.1",
+      "16.2"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "3 / 5 = 12 / x\nx = ( 5 * 12 ) / 3\nx = 20.0\n#### A",
+    "final_answer": "A",
+    "answer_label": "A",
+    "answer_text": "20.0",
+    "rationale": "3 / 5 = 12 / x\nx = ( 5 * 12 ) / 3\nx = 20.0"
+  },
+  {
+    "id": 98,
+    "question": "There was a simple interest of Rs . 4016.25 on a principal amount at the rate of 9 % p . a . in 5 years . Find the principal amount .",
+    "choices": [
+      "Rs 7925",
+      "Rs 8925",
+      "Rs 7926",
+      "Rs 7925",
+      "None of these"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "P = S . I . * 100 / R * T\nSo , by putting values from the question we can get the answer\nP = 4016.25 * 100 / 9 * 5 = 8925\nOption B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "Rs 8925",
+    "rationale": "P = S . I . * 100 / R * T\nSo , by putting values from the question we can get the answer\nP = 4016.25 * 100 / 9 * 5 = 8925\nOption B"
+  },
+  {
+    "id": 99,
+    "question": "During a 10 - week period , a doughnut store conducted a promotion by giving away one free doughnut with every doughnut purchased . If the store sold and gave away a total of K doughnuts per week , and each doughnut was sold for $ 0.25 , how many dollars worth of doughnuts did the store give away ?",
+    "choices": [
+      "K / 8",
+      "5 K / 4",
+      "K",
+      "3 K / 2",
+      "6 K"
+    ],
+    "labels": [
+      "A",
+      "B",
+      "C",
+      "D",
+      "E"
+    ],
+    "answer": "Total number of donuts sold and given away in a week = K = ( K / 2 + K / 2 ) = ( sold + free )\ncost of each donut = $ 0.25\nnumber of free donuts in a week = 0.25 * K / 2 = K / 8\nin 10 weeks time 10 * K / 8 = 5 K / 4\nAnswer : B\n#### B",
+    "final_answer": "B",
+    "answer_label": "B",
+    "answer_text": "5 K / 4",
+    "rationale": "Total number of donuts sold and given away in a week = K = ( K / 2 + K / 2 ) = ( sold + free )\ncost of each donut = $ 0.25\nnumber of free donuts in a week = 0.25 * K / 2 = K / 8\nin 10 weeks time 10 * K / 8 = 5 K / 4\nAnswer : B"
+  }
+]

@@ -1,0 +1,16 @@
+{
+  "dataset_name": "AQUA-RAT",
+  "task_type": "math_multiple_choice_reasoning",
+  "instruction": "Solve the following multiple-choice math problem. Show concise reasoning and end the response with \"####\" followed by the letter (A-E) of the correct option.\n",
+  "templates": {
+    "zero_shot": "Question: {question}\nChoices:\n{choices}\nAnswer: ",
+    "icl_demo": "Question: {question}\nChoices:\n{choices}\nAnswer: {answer}\n",
+    "icl_query": "Question: {question}\nChoices:\n{choices}\nAnswer: "
+  },
+  "choice_template": "{label}. {text}",
+  "answer_format": {
+    "format": "reasoning #### letter",
+    "description": "Produce reasoning steps followed by #### and the final answer letter."
+  }
+}
+

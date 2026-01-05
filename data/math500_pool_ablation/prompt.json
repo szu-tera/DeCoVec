@@ -1,0 +1,16 @@
+{
+  "dataset_name": "Math-500",
+  "task_type": "mathematical_reasoning",
+  "instruction": "Think step by step to answer the following question. Return the answer at the end of the response after a separator ####.\n",
+  "templates": {
+    "zero_shot": "Question: {question}\nAnswer: ",
+    "icl_demo": "Question: {question}\nAnswer: {solution}\n#### {final_answer}\n",
+    "icl_query": "Question: {question}\nAnswer: "
+  },
+  "answer_format": {
+    "format": "reasoning #### final_answer",
+    "separator": "####",
+    "description": "Provide detailed reasoning first, then output the final answer right after ####."
+  }
+}
+
