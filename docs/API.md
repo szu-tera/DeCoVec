@@ -31,14 +31,14 @@ Tests different lambda scaling values for task vectors.
 
 **Location**: `decovec/scale_tester.py`
 
-**Paper Reference**: Manual λ hyperparameter search (Section 4.2)
+**Paper Reference**: Manual lambda hyperparameter search (Section 4.2)
 
 ```python
 from decovec.scale_tester import ScaleTester
 
-# ScaleTester 通过 ExperimentManager 创建
-# 直接使用 run_decovec.py 进行测试
-# 示例：
+# ScaleTester is created through ExperimentManager
+# Use run_decovec.py directly for testing
+# Example:
 # python run_decovec.py \
 #   --mode test_scale \
 #   --dataset aqua_rat \
@@ -123,29 +123,29 @@ from typing import Optional
 
 @dataclass
 class SimpleConfig:
-    """DeCoVec 实验配置（仅保留论文需要的参数）"""
+    """DeCoVec experiment configuration (paper parameters only)."""
     
-    # 模型配置
+    # Model configuration
     model_name: str = "Qwen/Qwen2-7B"
     model_path: str = "checkpoints/qwen/Qwen2-7B"
     device: str = "cuda:0"
     torch_dtype: str = "float16"  # "float16" or "bfloat16"
     
-    # Embedding 模型（用于 KATE 示例选择）
+    # Embedding model (used for KATE example selection)
     emb_model_path: str = "checkpoints/emb_models/all-MiniLM-L6-v2"
     emb_model_name: str = "all-MiniLM-L6-v2"  # fallback
     
-    # 评估配置
+    # Evaluation configuration
     batch_size: int = 8
-    temperature: float = 0.0  # 生成式任务的温度（0=greedy）
-    max_samples: Optional[int] = None  # None=评估全部样本
+    temperature: float = 0.0  # Temperature for generative tasks (0=greedy)
+    max_samples: Optional[int] = None  # None = evaluate all samples
     results_dir: str = "results"
     
-    # 数据集配置
+    # Dataset configuration
     data_dir: str = "data"
-    seed: int = 42  # 默认随机种子
-    use_full_test_set: bool = True  # 使用完整测试集
-    dataset_seeds: dict = None  # 数据集特定随机种子
+    seed: int = 42  # Default random seed
+    use_full_test_set: bool = True  # Use full test set
+    dataset_seeds: dict = None  # Dataset-specific seeds
     experiment_name: str = "decovec_experiment"
 ```
 
@@ -178,7 +178,7 @@ def apply_steering(z_de, task_vector, lambda_scale):
     Args:
         z_de: Base decoding logits (Eq. 9), shape [vocab_size]
         task_vector: Task vector v_T, shape [vocab_size]
-        lambda_scale: Scaling factor λ
+        lambda_scale: Scaling factor (lambda)
     
     Returns:
         z_tilde: Task-oriented logits, shape [vocab_size]
@@ -214,14 +214,14 @@ builder = TaskVectorBuilder()
 logits_zs = model(zero_shot_input).logits[0, -1, :]   # [vocab_size]
 logits_icl = model(icl_input).logits[0, -1, :]        # [vocab_size]
 
-# Compute task vector (论文公式 7)
+# Compute task vector (paper equation 7)
 delta_z = builder.compute_delta_z(
     logits_zs,
     logits_icl
 )
 
-# Apply with manual lambda (论文公式 9-10)
-lambda_scale = 1.5
+# Apply with manual lambda (paper equations 9-10)
+lambda_scale = 1.0
 adjusted_logits = logits_icl + lambda_scale * delta_z
 ```
 

@@ -134,7 +134,7 @@ class DemonstrationSampler:
         
         # If cache data provided, use directly
         if use_cache and cache_data is not None:
-            print("✓ Loading index from cache")
+            print("[OK] Loading index from cache")
             self.bm25_index = cache_data["bm25_index"]
             self.bm25_corpus = cache_data["bm25_corpus"]
             self.calibration_data = calibration_data
@@ -147,13 +147,13 @@ class DemonstrationSampler:
         print(f"Preprocessing text for {len(texts)} samples...")
         tokenized_corpus = [self._preprocess_text(text) for text in texts]
         
-        print(f"✓ Corpus preprocessing complete")
+        print(f"[OK] Corpus preprocessing complete")
         
         # Build BM25 index
         print(f"\nBuilding BM25 index...")
         bm25_index = BM25Okapi(tokenized_corpus)
         
-        print("✓ BM25 index construction complete")
+        print("[OK] BM25 index construction complete")
         print("=" * 80)
         
         # Save to instance variables
@@ -187,7 +187,7 @@ class DemonstrationSampler:
         
         # If cache data provided, use directly
         if use_cache and cache_data is not None:
-            print("✓ Loading index from cache")
+            print("[OK] Loading index from cache")
             self.embeddings = cache_data["embeddings"]
             self.knn_index = cache_data["knn_index"]
             self.calibration_data = calibration_data
@@ -213,7 +213,7 @@ class DemonstrationSampler:
             convert_to_numpy=True
         )
         
-        print(f"✓ Embeddings shape: {embeddings.shape}")
+        print(f"[OK] Embeddings shape: {embeddings.shape}")
         
         # Build kNN index
         print(f"\nBuilding kNN index (k={self.n_shot + 1})...")
@@ -224,7 +224,7 @@ class DemonstrationSampler:
         )
         knn_index.fit(embeddings)
         
-        print("✓ kNN index construction complete")
+        print("[OK] kNN index construction complete")
         print("=" * 80)
         
         # Save to instance variables
@@ -248,30 +248,30 @@ class DemonstrationSampler:
         
         Args:
             all_data: All data to compute nearest neighbors for (usually test set)
-            calibration_data: 校准集数据（作为示例库）
-            max_neighbors: 预计算的最大邻居数（默认为 n_shot * 2）
+            calibration_data: Calibration set data (used as example pool)
+            max_neighbors: Maximum neighbors to precompute (default: n_shot * 2)
         
         Returns:
-            precomputed_neighbors: {sample_idx: [neighbor_indices]} 字典
+            precomputed_neighbors: Dictionary mapping {sample_idx: [neighbor_indices]}
         """
         if max_neighbors is None:
-            max_neighbors = self.n_shot * 2  # 预留一些备用
+            max_neighbors = self.n_shot * 2  # Reserve some buffer
         
         print("\n" + "=" * 80)
-        print("预计算所有样本的最近邻")
+        print("Precomputing nearest neighbors for all samples")
         print("=" * 80)
         
-        # 根据选择模式使用不同的索引方法
+        # Use different indexing methods based on selection mode
         if self.selection_mode == "topk":
-            # TopK 方法：基于原始数据集索引顺序选择最近邻
-            # 不需要预计算，直接基于索引选择
+            # TopK method: select nearest neighbors based on original dataset index order
+            # No precomputation needed, select directly based on indices
             precomputed_neighbors = {}
             for i in range(len(all_data)):
-                # 选择索引最接近 i 的样本
+                # Select samples with indices closest to i
                 n_examples = min(max_neighbors, len(calibration_data))
                 candidate_indices = []
                 
-                # 从 i 开始，向两边扩展
+                # Expand in both directions from i
                 for offset in range(n_examples):
                     left_idx = i - offset
                     if 0 <= left_idx < len(calibration_data) and left_idx not in candidate_indices:
@@ -286,7 +286,7 @@ class DemonstrationSampler:
                             if len(candidate_indices) >= n_examples:
                                 break
                 
-                # 如果不够，从两端补充
+                # If not enough, fill from edges
                 if len(candidate_indices) < n_examples:
                     for idx in range(len(calibration_data)):
                         if idx not in candidate_indices:
@@ -294,45 +294,45 @@ class DemonstrationSampler:
                             if len(candidate_indices) >= n_examples:
                                 break
                 
-                # 按索引顺序排序
+                # Sort by index order
                 candidate_indices = sorted(candidate_indices[:n_examples])
                 precomputed_neighbors[i] = candidate_indices
             
-            print(f"✓ TopK 预计算完成，共 {len(precomputed_neighbors)} 个样本")
+            print(f"[OK] TopK precomputation complete for {len(precomputed_neighbors)} samples")
             if len(precomputed_neighbors) > 0:
-                print(f"  每个样本预留 {len(precomputed_neighbors[0])} 个候选邻居")
+                print(f"  Reserved {len(precomputed_neighbors[0])} candidate neighbors per sample")
             print("=" * 80)
             
-            # 保存到实例变量
+            # Save to instance variables
             self.precomputed_neighbors = precomputed_neighbors
             
             return precomputed_neighbors
         
         if self.selection_mode == "bm25":
-            # 使用 BM25 索引
+            # Use BM25 index
             if self.bm25_index is None:
-                raise ValueError("必须先调用 build_bm25_index() 构建索引")
+                raise ValueError("Must call build_bm25_index() first to build the index")
             
-            # 提取查询文本
+            # Extract query text
             query_texts = self._extract_text_for_indexing(all_data)
             
-            # 预处理查询文本
-            print(f"预处理 {len(query_texts)} 个查询样本的文本...")
+            # Preprocess query text
+            print(f"Preprocessing text for {len(query_texts)} query samples...")
             tokenized_queries = [self._preprocess_text(text) for text in query_texts]
             
-            # 批量搜索最近邻
-            print(f"\n批量搜索最近邻（k={max_neighbors}）...")
+            # Batch search for nearest neighbors
+            print(f"\nBatch searching nearest neighbors (k={max_neighbors})...")
             precomputed_neighbors = {}
             for i, query_tokens in enumerate(tokenized_queries):
-                # 获取 BM25 分数
+                # Get BM25 scores
                 scores = self.bm25_index.get_scores(query_tokens)
-                # 按分数降序排序，获取 top-k
+                # Sort by score descending and get top-k
                 top_indices = np.argsort(scores)[::-1][:min(max_neighbors, len(calibration_data))]
                 precomputed_neighbors[i] = top_indices.tolist()
             
-            print(f"✓ 预计算完成，共 {len(precomputed_neighbors)} 个样本")
+            print(f"[OK] Precomputation complete for {len(precomputed_neighbors)} samples")
             if len(precomputed_neighbors) > 0:
-                print(f"  每个样本预留 {len(precomputed_neighbors[0])} 个候选邻居")
+                print(f"  Reserved {len(precomputed_neighbors[0])} candidate neighbors per sample")
             print("=" * 80)
             
             # 保存到实例变量
@@ -341,19 +341,19 @@ class DemonstrationSampler:
             return precomputed_neighbors
         
         else:
-            # 使用 kNN 索引（原有逻辑）
-            # 确保已经构建了索引
+            # Use kNN index (original logic)
+            # Ensure index has been built
             if self.knn_index is None or self.embeddings is None:
-                raise ValueError("必须先调用 build_knn_index() 构建索引")
+                raise ValueError("Must call build_knn_index() first to build the index")
             
-            # 计算所有查询样本的 embeddings
-            print(f"计算 {len(all_data)} 个查询样本的 embeddings...")
-            # 对于 news_factor，使用与 build_knn_index 相同的策略（直接使用所有选项）
+            # Compute embeddings for all query samples
+            print(f"Computing embeddings for {len(all_data)} query samples...")
+            # For news_factor, use same strategy as build_knn_index (directly use all choices)
             if self.dataset_type == "news_factor":
                 queries = []
                 for item in all_data:
                     choices = item.get("choices", [])
-                    # 将所有选项拼接起来
+                    # Concatenate all choices
                     choices_text = " ".join(choices)
                     queries.append(choices_text)
             else:
@@ -364,23 +364,23 @@ class DemonstrationSampler:
                 convert_to_numpy=True
             )
             
-            print(f"✓ 查询 embeddings shape: {query_embeddings.shape}")
+            print(f"[OK] Query embeddings shape: {query_embeddings.shape}")
             
-            # 批量搜索最近邻
-            print(f"\n批量搜索最近邻（k={max_neighbors}）...")
+            # Batch search for nearest neighbors
+            print(f"\nBatch searching nearest neighbors (k={max_neighbors})...")
             distances, indices = self.knn_index.kneighbors(
                 query_embeddings,
                 n_neighbors=min(max_neighbors, len(calibration_data))
             )
             
-            # 保存结果
+            # Save results
             precomputed_neighbors = {}
             for i in range(len(all_data)):
-                # 保存排好序的邻居索引列表（已经按距离从近到远排序）
+                # Save sorted neighbor index list (already sorted by distance from near to far)
                 precomputed_neighbors[i] = indices[i].tolist()
             
-            print(f"✓ 预计算完成，共 {len(precomputed_neighbors)} 个样本")
-            print(f"  每个样本预留 {len(precomputed_neighbors[0])} 个候选邻居")
+            print(f"[OK] Precomputation complete for {len(precomputed_neighbors)} samples")
+            print(f"  Reserved {len(precomputed_neighbors[0])} candidate neighbors per sample")
             print("=" * 80)
             
             # 保存到实例变量
@@ -395,21 +395,21 @@ class DemonstrationSampler:
         use_precomputed: bool = True
     ) -> List[Dict]:
         """
-        为给定样本获取 ICL 示例（使用 kNN 或预计算结果）
+        Get ICL examples for a given sample (using kNN or precomputed results)
         
         Args:
-            query_idx: 查询样本的索引
-            calibration_data: 校准集数据（如果为 None 则使用已保存的）
-            use_precomputed: 是否使用预计算的邻居（如果可用）
+            query_idx: Index of the query sample
+            calibration_data: Calibration set data (if None, use saved data)
+            use_precomputed: Whether to use precomputed neighbors (if available)
         
         Returns:
-            examples: 选中的示例列表
+            examples: List of selected examples
         """
         if calibration_data is None:
             calibration_data = self.calibration_data
         
         if calibration_data is None:
-            raise ValueError("没有可用的校准数据")
+            raise ValueError("No calibration data available")
         
         if self.selection_mode == "random_icl":
             examples = self._get_random_examples(query_idx, calibration_data)
@@ -423,73 +423,73 @@ class DemonstrationSampler:
             examples = self._get_topk_examples(query_idx, calibration_data)
             return self._apply_example_order(examples, query_idx)
         
-        # 如果有预计算的结果，直接使用（更快）
+        # If precomputed results exist, use directly (faster)
         if use_precomputed and self.precomputed_neighbors is not None:
             if query_idx not in self.precomputed_neighbors:
-                raise ValueError(f"查询索引 {query_idx} 没有预计算的邻居")
+                raise ValueError(f"Query index {query_idx} has no precomputed neighbors")
             
-            # 直接从预计算结果中获取前 n_shot 个邻居
+            # Get first n_shot neighbors from precomputed results
             neighbor_indices = self.precomputed_neighbors[query_idx][:self.n_shot]
             examples = [calibration_data[idx] for idx in neighbor_indices]
             return self._apply_example_order(examples, query_idx)
         
-        # 根据选择模式进行实时计算
+        # Compute in real time based on selection mode
         if self.selection_mode == "bm25":
-            # 使用 BM25 检索
+            # Use BM25 retrieval
             if self.bm25_index is None:
-                raise ValueError("必须先调用 build_bm25_index() 构建索引")
+                raise ValueError("Must call build_bm25_index() first to build the index")
             
-            # 提取查询文本（query_idx 应该指向 calibration_data 中的索引）
+            # Extract query text (query_idx should point to index in calibration_data)
             if query_idx >= len(calibration_data):
-                raise ValueError(f"查询索引 {query_idx} 超出校准集范围 {len(calibration_data)}")
+                raise ValueError(f"Query index {query_idx} exceeds calibration set size {len(calibration_data)}")
             
             query_item = calibration_data[query_idx]
             query_texts = self._extract_text_for_indexing([query_item])
             if not query_texts or not query_texts[0]:
-                raise ValueError(f"无法提取查询文本，索引: {query_idx}")
+                raise ValueError(f"Failed to extract query text, index: {query_idx}")
             
-            # 预处理查询文本
+            # Preprocess query text
             query_tokens = self._preprocess_text(query_texts[0])
             
-            # 获取 BM25 分数
+            # Get BM25 scores
             scores = self.bm25_index.get_scores(query_tokens)
             
-            # 按分数降序排序，获取 top-n_shot
-            top_indices = np.argsort(scores)[::-1][:self.n_shot + 1]  # +1 因为可能包含自己
+            # Sort by score descending and get top-n_shot
+            top_indices = np.argsort(scores)[::-1][:self.n_shot + 1]  # +1 because might include self
             
-            # 排除自己（如果在校准集中）
+            # Exclude self (if in calibration set)
             top_indices = [idx for idx in top_indices if idx != query_idx][:self.n_shot]
             
             examples = [calibration_data[idx] for idx in top_indices]
             return self._apply_example_order(examples, query_idx)
         
         else:
-            # 使用 kNN 检索（原有逻辑）
+            # Use kNN retrieval (original logic)
             if self.knn_index is None:
-                raise ValueError("必须先调用 build_knn_index() 构建索引")
+                raise ValueError("Must call build_knn_index() first to build the index")
             
-            # 获取最近邻（第一个是自己，跳过）
+            # Get nearest neighbors (first is self, skip it)
             distances, indices = self.knn_index.kneighbors(
                 [self.embeddings[query_idx]],
                 n_neighbors=self.n_shot + 1
             )
             
-            # 跳过第一个（自己）
+            # Skip first (self)
             neighbor_indices = indices[0][1:self.n_shot + 1]
             
-            # 返回示例
+            # Return examples
             examples = [calibration_data[idx] for idx in neighbor_indices]
             return self._apply_example_order(examples, query_idx)
 
     def set_selection_mode(self, mode: str):
-        """设置示例选择模式"""
+        """Set example selection mode"""
         valid_modes = {"kate", "random_icl", "bm25", "mapping_error", "topk"}
         if mode not in valid_modes:
-            raise ValueError(f"未知的 ICL 方法: {mode}，可选值: {', '.join(valid_modes)}")
+            raise ValueError(f"Unknown ICL method: {mode}, options: {', '.join(valid_modes)}")
         self.selection_mode = mode
 
     def _apply_example_order(self, examples: List[Dict], query_idx: Optional[int] = None) -> List[Dict]:
-        """根据配置调整示例顺序"""
+        """Adjust example order based on configuration"""
         if not examples:
             return examples
         if self.example_order == "ordered":
@@ -512,7 +512,7 @@ class DemonstrationSampler:
         calibration_data: List[Dict],
         seed: Optional[int] = None
     ) -> List[Dict]:
-        """随机选择 ICL 示例"""
+        """Randomly select ICL examples"""
         if seed is None:
             seed = query_idx
         rng = np.random.RandomState(seed)
@@ -530,18 +530,19 @@ class DemonstrationSampler:
         seed: Optional[int] = None
     ) -> List[Dict]:
         """
-        随机选择 ICL 示例并随机化 label（Mapping Error 方法）
+        Randomly select ICL examples and randomize labels (Mapping Error method)
         
-        用于测试模型是否依赖上下文证据（Context）还是预训练先验（Priors）。
-        如果模型主要依赖预训练先验，即使 label 被随机化，性能也不会显著下降。
+        Tests whether the model relies on context evidence (Context) or pre-trained priors (Priors).
+        If the model primarily relies on pre-trained priors, performance won't drop significantly
+        even if labels are randomized.
         
         Args:
-            query_idx: 查询样本索引
-            calibration_data: 校准集数据
-            seed: 随机种子
+            query_idx: Query sample index
+            calibration_data: Calibration set data
+            seed: Random seed
         
         Returns:
-            examples: 选中的示例列表（label 已被随机化）
+            examples: List of selected examples (labels randomized)
         """
         if seed is None:
             seed = query_idx
@@ -551,20 +552,20 @@ class DemonstrationSampler:
         if n_examples == 0:
             return []
         
-        # 随机选择示例
+        # Randomly select examples
         selected_indices = rng.choice(available_indices, size=n_examples, replace=False)
         examples = []
         
         for idx in selected_indices:
-            # 深拷贝示例，避免修改原始数据
+            # Deep copy example to avoid modifying original data
             example = calibration_data[idx].copy()
             
-            # 根据数据集类型随机化 label
+            # Randomize labels based on dataset type
             if self.dataset_type == "boolq":
-                # BoolQ: answer 字段，可选值 ["true", "false"]
+                # BoolQ: answer field, options ["true", "false"]
                 original_answer = example.get("answer", "true")
                 choices = ["true", "false"]
-                # 随机选择一个不同的答案（如果可能）
+                # Randomly select a different answer if possible
                 wrong_choices = [c for c in choices if c != original_answer]
                 if wrong_choices:
                     example["answer"] = rng.choice(wrong_choices)
@@ -572,23 +573,23 @@ class DemonstrationSampler:
                     example["answer"] = rng.choice(choices)
             
             elif self.dataset_type == "commonsense_qa":
-                # CommonsenseQA: answer 字段，可选值来自 labels 列表
+                # CommonsenseQA: answer field, options from labels list
                 labels = example.get("labels", ["A", "B", "C", "D", "E"])
                 original_answer = example.get("answer", labels[0] if labels else "A")
-                # 随机选择一个不同的标签
+                # Randomly select a different label
                 wrong_labels = [l for l in labels if l != original_answer]
                 if wrong_labels:
                     example["answer"] = rng.choice(wrong_labels)
                 else:
                     example["answer"] = rng.choice(labels)
-                # 同时更新 answer_text（如果存在）
+                # Also update answer_text if it exists
                 if "answer_text" in example and "choices" in example:
                     answer_idx = labels.index(example["answer"])
                     if answer_idx < len(example["choices"]):
                         example["answer_text"] = example["choices"][answer_idx]
             
             elif self.dataset_type == "truthfulqa":
-                # TruthfulQA: best_answer 字段，可选值来自 mc1_choices 或 mc2_choices
+                # TruthfulQA: best_answer field, options from mc1_choices or mc2_choices
                 mc1_choices = example.get("mc1_choices", [])
                 if isinstance(mc1_choices, str):
                     try:
@@ -597,7 +598,7 @@ class DemonstrationSampler:
                         mc1_choices = []
                 
                 original_answer = example.get("best_answer", "")
-                # 优先使用 mc1_choices，如果没有则使用 mc2_choices
+                # Prefer mc1_choices; if not available, use mc2_choices
                 available_choices = mc1_choices if mc1_choices else example.get("mc2_choices", [])
                 if isinstance(available_choices, str):
                     try:
@@ -606,7 +607,7 @@ class DemonstrationSampler:
                         available_choices = []
                 
                 if available_choices:
-                    # 随机选择一个不同的答案
+                    # Randomly select a different answer
                     wrong_choices = [c for c in available_choices if c != original_answer]
                     if wrong_choices:
                         example["best_answer"] = rng.choice(wrong_choices)
@@ -614,16 +615,16 @@ class DemonstrationSampler:
                         example["best_answer"] = rng.choice(available_choices)
             
             elif self.dataset_type == "news_factor":
-                # NEWS-FACTOR: answer 字段，可选值来自 labels 列表
+                # NEWS-FACTOR: answer field, options from labels list
                 labels = example.get("labels", ["A", "B", "C", "D"])
                 original_answer = example.get("answer", labels[0] if labels else "A")
-                # 随机选择一个不同的标签
+                # Randomly select a different label
                 wrong_labels = [l for l in labels if l != original_answer]
                 if wrong_labels:
                     example["answer"] = rng.choice(wrong_labels)
                 else:
                     example["answer"] = rng.choice(labels)
-                # 同时更新 answer_text 和 best_answer（如果存在）
+                # Also update answer_text and best_answer if they exist
                 if "answer_text" in example and "choices" in example:
                     answer_idx = labels.index(example["answer"])
                     if answer_idx < len(example["choices"]):
@@ -631,7 +632,7 @@ class DemonstrationSampler:
                         example["best_answer"] = example["choices"][answer_idx]
             
             elif self.dataset_type == "strategyqa":
-                # StrategyQA: answer 字段，可选值 ["Yes", "No"]
+                # StrategyQA: answer field, options ["Yes", "No"]
                 original_answer = example.get("answer", "Yes")
                 choices = ["Yes", "No"]
                 wrong_choices = [c for c in choices if c != original_answer]
@@ -640,9 +641,9 @@ class DemonstrationSampler:
                 else:
                     example["answer"] = rng.choice(choices)
             
-            # 对于生成式数据集（gsm8k, math500, svamp, asdiv, aqua_rat），
-            # 由于答案格式复杂，暂时不进行随机化（保持原样）
-            # 如果需要，可以后续扩展
+            # For generative datasets (gsm8k, math500, svamp, asdiv, aqua_rat),
+            # label randomization is not performed for now due to complex answer format.
+            # Can be extended in the future if needed.
             
             examples.append(example)
         
@@ -655,63 +656,63 @@ class DemonstrationSampler:
         seed: Optional[int] = None
     ) -> List[Dict]:
         """
-        基于原始数据集索引顺序选择最近邻示例（TopK 方法）
+        Select nearest neighbor examples based on original dataset index order (TopK method)
         
-        将给定测试样本的最近邻作为相应的上下文示例。
-        这里的"最近邻"指的是在原始数据集中索引位置靠近的样本。
+        Use the nearest neighbors of a given test sample as corresponding context examples.
+        Here, "nearest neighbors" refers to samples with indices close to each other in the original dataset.
         
         Args:
-            query_idx: 查询样本的索引（在测试集中的索引）
-            calibration_data: 校准集数据
-            seed: 随机种子（未使用，保持接口一致性）
+            query_idx: Query sample index (in test set)
+            calibration_data: Calibration set data
+            seed: Random seed (unused, kept for interface consistency)
         
         Returns:
-            examples: 选中的示例列表（按索引顺序选择）
+            examples: List of selected examples (ordered by index)
         """
         n_examples = min(self.n_shot, len(calibration_data))
         if n_examples == 0:
             return []
         
-        # 基于原始数据集索引选择最近邻
-        # 策略：选择校准集中索引最接近 query_idx 的 n_shot 个样本
-        # 如果 query_idx 超出校准集范围，从两端选择
+        # Select neighbors based on original dataset index
+        # Strategy: select n_shot samples from calibration set with indices closest to query_idx
+        # If query_idx exceeds calibration set size, select from both ends
         
         calibration_size = len(calibration_data)
         
-        # 计算候选索引范围
-        # 优先选择 query_idx 附近的样本，如果不够则从两端补充
+        # Compute candidate index range
+        # Prioritize selecting samples near query_idx; if insufficient, fill from both ends
         candidate_indices = []
         
-        # 首先尝试选择 query_idx 附近的样本
+        # First try selecting samples near query_idx
         half_shot = n_examples // 2
         
-        # 从 query_idx 开始，向两边扩展
+        # Expand in both directions from query_idx
         for offset in range(n_examples):
-            # 先尝试 query_idx - offset（左侧）
+            # First try query_idx - offset (left side)
             left_idx = query_idx - offset
             if 0 <= left_idx < calibration_size and left_idx not in candidate_indices:
                 candidate_indices.append(left_idx)
                 if len(candidate_indices) >= n_examples:
                     break
             
-            # 再尝试 query_idx + offset（右侧）
-            if offset > 0:  # 避免重复添加 query_idx
+            # Then try query_idx + offset (right side)
+            if offset > 0:  # Avoid duplicate adding query_idx
                 right_idx = query_idx + offset
                 if 0 <= right_idx < calibration_size and right_idx not in candidate_indices:
                     candidate_indices.append(right_idx)
                     if len(candidate_indices) >= n_examples:
                         break
         
-        # 如果候选索引不够，从两端补充
+        # If candidate indices insufficient, fill from both ends
         if len(candidate_indices) < n_examples:
-            # 从开头补充
+            # Fill from start
             for idx in range(calibration_size):
                 if idx not in candidate_indices:
                     candidate_indices.append(idx)
                     if len(candidate_indices) >= n_examples:
                         break
             
-            # 如果还不够，从末尾补充
+            # If still insufficient, fill from end
             if len(candidate_indices) < n_examples:
                 for idx in range(calibration_size - 1, -1, -1):
                     if idx not in candidate_indices:
@@ -719,10 +720,10 @@ class DemonstrationSampler:
                         if len(candidate_indices) >= n_examples:
                             break
         
-        # 按索引顺序排序，确保选择的是"最近邻"
+        # Sort by index order to ensure selecting "nearest neighbors"
         candidate_indices = sorted(candidate_indices[:n_examples])
         
-        # 返回示例
+        # Return examples
         examples = [calibration_data[idx] for idx in candidate_indices]
         return examples
     
@@ -732,34 +733,34 @@ class DemonstrationSampler:
         calibration_data: Optional[List[Dict]] = None
     ) -> List[Dict]:
         """
-        为给定查询文本获取 ICL 示例
+        Get ICL examples for a given query text
         
         Args:
-            query_text: 查询文本
-            calibration_data: 校准集数据（如果为 None 则使用已保存的）
+            query_text: Query text
+            calibration_data: Calibration set data (if None, use saved data)
         
         Returns:
-            examples: 选中的示例列表
+            examples: List of selected examples
         """
         if self.knn_index is None:
-            raise ValueError("必须先调用 build_knn_index() 构建索引")
+            raise ValueError("Must call build_knn_index() first to build the index")
         
         if calibration_data is None:
             calibration_data = self.calibration_data
         
         if calibration_data is None:
-            raise ValueError("没有可用的校准数据")
+            raise ValueError("No calibration data available")
         
-        # 计算查询的 embedding
+        # Compute embedding for query
         query_emb = self.emb_model.encode([query_text])[0]
         
-        # 获取最近邻
+        # Get nearest neighbors
         distances, indices = self.knn_index.kneighbors(
             [query_emb],
             n_neighbors=self.n_shot
         )
         
-        # 返回示例
+        # Return examples
         examples = [calibration_data[idx] for idx in indices[0]]
         return self._apply_example_order(examples)
     
@@ -771,20 +772,20 @@ class DemonstrationSampler:
         query_answer: str = None
     ) -> str:
         """
-        构造 ICL 提示词（使用 prompt_loader）
+        Construct ICL prompt (using prompt_loader)
         
-        根据数据集类型自动构建正确格式的 ICL 提示。
+        Automatically build correct format ICL prompt based on dataset type.
         
         Args:
-            examples: KATE 选择的示例列表
-            query_item: 查询样本（完整 Dict）
-            include_query_answer: 是否包含查询答案（用于校准）
-            query_answer: 查询答案
+            examples: List of examples selected by KATE
+            query_item: Query sample (complete Dict)
+            include_query_answer: Whether to include query answer (for calibration)
+            query_answer: Query answer
         
         Returns:
-            prompt: 完整提示词
+            prompt: Complete prompt
         """
-        # 使用 prompt_loader 的统一构建函数
+        # Use unified construction function from prompt_loader
         prompt = construct_icl_prompt_util(
             examples,
             query_item,
@@ -794,14 +795,14 @@ class DemonstrationSampler:
             query_answer
         )
         
-        # 检查长度，如果太长则截断 KATE 示例
+        # Check length; truncate KATE examples if too long
         if self.tokenizer is not None:
             tokens = self.tokenizer.encode(prompt)
             if len(tokens) > self.max_demo_tokens + 100:
-                # 减少 KATE 示例数量
+                # Reduce number of KATE examples
                 if len(examples) > 1:
                     return self.construct_icl_prompt(
-                        examples[:-1],  # 移除最后一个 KATE 示例
+                        examples[:-1],  # Remove last KATE example
                         query_item,
                         include_query_answer,
                         query_answer
@@ -817,42 +818,42 @@ class DemonstrationSampler:
         dataset_type: str = "truthfulqa"
     ) -> str:
         """
-        构造零样本提示词（使用 prompt_loader）
+        Construct zero-shot prompt (using prompt_loader)
         
-        根据数据集类型自动构建正确格式的零样本提示。
+        Automatically build correct format zero-shot prompt based on dataset type.
         
         Args:
-            query_item: 查询样本（完整 Dict）
-            include_answer: 是否包含答案
-            answer: 答案文本
-            dataset_type: 数据集类型
+            query_item: Query sample (complete Dict)
+            include_answer: Whether to include answer
+            answer: Answer text
+            dataset_type: Dataset type
         
         Returns:
-            prompt: 零样本提示词
+            prompt: Zero-shot prompt
         """
-        # 加载对应的 prompt 配置
+        # Load corresponding prompt configuration
         prompt_config = load_prompt_config(dataset_type)
         
-        # 如果需要包含答案，使用 ICL demo 格式
+        # If answer should be included, use ICL demo format
         if include_answer and answer:
             query_with_answer = query_item.copy()
-            # 根据数据集类型设置答案字段
+            # Set answer field based on dataset type
             if dataset_type == "truthfulqa":
                 query_with_answer["best_answer"] = answer
             else:
                 query_with_answer["answer"] = answer
             
-            # 格式化 ICL demo
+            # Format as ICL demo
             demo = format_icl_demo(query_with_answer, prompt_config, dataset_type)
             
-            # 如果配置中有 instruction，需要添加到前面（保持与 zero-shot 格式一致）
+            # If config has instruction, need to add at front (keep consistency with zero-shot format)
             if "instruction" in prompt_config:
                 instruction = prompt_config["instruction"]
                 return instruction + " " + demo
             else:
                 return demo
         else:
-            # 否则使用 zero-shot 格式
+            # Otherwise use zero-shot format
             from prompt_loader import format_zero_shot_prompt  # type: ignore
             return format_zero_shot_prompt(query_item, prompt_config, dataset_type)
 
