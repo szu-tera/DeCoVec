@@ -77,7 +77,7 @@ python run_decovec.py \
     --model qwen2-7b \
     --mode test_scale \
     --icl_method kate \
-    --n_shot 15
+    --n_shot 20
 
 # Run on Math-500
 python run_decovec.py \
@@ -171,10 +171,6 @@ delta_z = builder.compute_delta_z(
 |---------------|---------------|-------------|
 | Eq. 7 | `decovec_core.py::TaskVectorBuilder.compute_delta_z()` | Compute v_T = z_icl - z_zs |
 | λ (lambda) | `scale_tester.py::test_lambda_values()` | Scaling factor for task vector |
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
