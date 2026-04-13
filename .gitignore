@@ -80,3 +80,8 @@ ENV/
 .cache/
 tmp/
 temp/
+
+log/
+log-nomask/
+run*.sh
+运行示例.txt

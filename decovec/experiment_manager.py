@@ -203,11 +203,7 @@ class ExperimentManager:
         )
         print("✓ Baseline evaluator created")
         
-        # Create steering computer (for dynamic DeCoVec computation)
-        from decovec.decovec_core import TaskVectorBuilder
-        steering_computer = TaskVectorBuilder()
-        
-        # λ value tester
+        # λ value tester (uses task_vector_builder.steering_computer)
         # Get model name
         model_name = self.config.model_name or "unknown_model"
         

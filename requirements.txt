@@ -1,6 +1,6 @@
 # DeCoVec Dependencies
 # PyTorch (please install separately according to your CUDA version)
-# pip install torch>=2.0.0 --index-url https://download.pytorch.org/whl/cu118
+# pip3 install torch torchvision --index-url https://download.pytorch.org/whl/cu128
 
 # ============================================
 # Core Dependencies
@@ -8,6 +8,7 @@
 transformers>=4.40.0
 accelerate>=0.27.0
 sentence-transformers>=2.2.0  # KATE embedding
+modelscope>=1.11.0
 
 # ============================================
 # Data Processing

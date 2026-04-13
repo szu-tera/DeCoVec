@@ -1,18 +1,28 @@
 # DeCoVec: Building Decoding Space based Task Vector for Large Language Models via In-Context Learning
 
-[![Anonymous Submission](https://img.shields.io/badge/Submission-Anonymous-red)](https://openreview.net/)
-[![Python 3.10+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![ACL 2026 Findings](https://img.shields.io/badge/ACL%202026-Findings-green)](https://2026.aclweb.org/)
 
-> **Anonymous submission for peer review. Author information withheld.**
+This repository contains the code for our paper **DeCoVec** (ACL 2026 Findings).
 
-## 🌟 Overview
+## New
 
-**DeCoVec** is a training-free and non-invasive framework for constructing task vectors directly in the **decoding space**. Unlike traditional methods that operate in model weights or internal activations, DeCoVec:
+- **[2026/04/13]** Our paper has been accepted to **ACL 2026 Findings**.
 
-- ✨ **Training-free**: No gradient updates or fine-tuning required
-- 🔓 **Non-invasive**: No modification to model parameters or internal states
-- 🎯 **Effective**: Consistent performance gains across knowledge-intensive and reasoning tasks
-- 🚀 **Plug-and-play**: Works seamlessly with any pre-trained LLM
+## Overview
+
+**DeCoVec** (**Dec**oding-space task vector via **Co**ntrastive ICL) builds a task vector in **output logit space** with **ICL**: contrast **few-shot** vs **zero-shot** logits each step, then **add** that vector at decode time. Unlike vectors in **weights** or **hidden activations**, it is **training-free** and **non-invasive** (no fine-tuning, no internal hooks).
+
+<div align="center">
+  <img src="figure/my-method.png" width="800" alt="DeCoVec method overview"/>
+  <br>
+</div>
+
+## Key Features
+
+- **Training-free & non-invasive**: no weight updates or activation-space optimization; logits-only steering.
+- **Decoding-space Δz**: task signal as the difference between ICL and zero-shot **distributions** at the decoder output.
+- **Solid empirical gains**: seven LLMs (0.5B–9B) on TruthfulQA, Math-500, and AQUA-RAT—**consistent** lifts over few-shot baselines (up to **+5.50** avg accuracy in our runs).
+- **Lightweight**: no extra input tokens beyond your chosen ICL prefix; robust to demonstration ordering in our analyses.
 
 ### Key Idea
 
@@ -56,8 +66,8 @@ See paper Table 2 for complete results.
 
 ```bash
 # Clone the repository
-git clone https://anonymous.4open.science/r/DeCoVec
-cd DeCoVec
+git clone https://github.com/Liflysheep/DeCo.git
+cd DeCo
 
 # Install dependencies
 pip install -r requirements.txt
@@ -102,7 +112,7 @@ Key hyperparameters:
 ## 📁 Project Structure
 
 ```
-DeCoVec/
+DeCo/
 ├── decovec/                    # Core implementation
 │   ├── decovec_core.py        # Main algorithm
 │   ├── decovec_processor.py   # LogitsProcessor for HuggingFace
@@ -146,33 +156,18 @@ python run_decovec.py \
 
 - [API Documentation](docs/API.md)
 
-## 🎯 Key Components
+## Citation
 
-### Core Algorithm
+If you use this code or our method, please cite the camera-ready version once it appears on the ACL Anthology. A minimal BibTeX entry (update `author`, `pages`, and `url` from the official proceedings entry when available):
 
-The main implementation is in `decovec/decovec_core.py`:
-
-```python
-from decovec.decovec_core import TaskVectorBuilder
-
-# Initialize task vector builder
-builder = TaskVectorBuilder()
-
-# Compute task vector (Eq. 7)
-delta_z = builder.compute_delta_z(
-    logits_base,      # Zero-shot logits (z_zs)
-    logits_finetuned  # ICL logits (z_icl)
-)
+```bibtex
+@inproceedings{decovec-acl26findings,
+  title = {{DeCoVec}: Building Decoding Space based Task Vector for Large Language Models via In-Context Learning},
+  booktitle = {Findings of the Association for Computational Linguistics: ACL 2026},
+  year = {2026},
+  publisher = {Association for Computational Linguistics},
+  url = {https://github.com/Liflysheep/DeCo}
+}
 ```
 
-### Correspondence with Paper
-
-| Paper Notation | Code Location | Description |
-|---------------|---------------|-------------|
-| Eq. 7 | `decovec_core.py::TaskVectorBuilder.compute_delta_z()` | Compute v_T = z_icl - z_zs |
-| λ (lambda) | `scale_tester.py::test_lambda_values()` | Scaling factor for task vector |
-
----
-
-> **Note**: This is an anonymous submission. Author information and acknowledgments will be added upon acceptance.
 

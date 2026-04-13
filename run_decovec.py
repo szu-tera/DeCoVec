@@ -151,6 +151,19 @@ def parse_args():
         help="Run identifier for self-consistency output naming (e.g., result_1.json)"
     )
     
+    # Delta_z mask configuration
+    parser.add_argument(
+        "--no_delta_z_mask",
+        action="store_true",
+        help="Disable delta_z mask (default: mask tokens with prob < 0.1*max_prob)"
+    )
+    parser.add_argument(
+        "--delta_z_mask_threshold",
+        type=float,
+        default=None,
+        help="Mask threshold: mask tokens with prob < threshold*max_prob (default: 0.1)"
+    )
+    
     return parser.parse_args()
 
 
@@ -165,6 +178,14 @@ def main():
     if args.temperature is not None:
         config.temperature = args.temperature
         print(f"[OK] Temperature: {args.temperature}")
+    
+    # Override delta_z mask if provided
+    if args.no_delta_z_mask:
+        config.delta_z_use_mask = False
+        print("[OK] Delta_z mask: disabled")
+    if args.delta_z_mask_threshold is not None:
+        config.delta_z_mask_threshold = args.delta_z_mask_threshold
+        print(f"[OK] Delta_z mask threshold: {args.delta_z_mask_threshold}")
     
     # Override model if provided
     if args.model is not None:

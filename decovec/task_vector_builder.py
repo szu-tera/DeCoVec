@@ -10,6 +10,7 @@ from tqdm import tqdm
 from decovec.decovec_core import TaskVectorBuilder
 from decovec.demonstration_sampler import DemonstrationSampler
 from evaluate.evaluate_utils import tokenize_prompt_and_continuation
+from simple_config import get_config
 
 
 class TaskVectorComputer:
@@ -39,8 +40,12 @@ class TaskVectorComputer:
         self.device = device
         self.dataset = dataset
         
-        # Create steering computer
-        self.steering_computer = TaskVectorBuilder()
+        # Create steering computer (mask config from simple_config)
+        config = get_config()
+        self.steering_computer = TaskVectorBuilder(
+            use_mask=getattr(config, "delta_z_use_mask", True),
+            mask_threshold=getattr(config, "delta_z_mask_threshold", 0.1),
+        )
     
     def compute_delta_z_with_centering(
         self,

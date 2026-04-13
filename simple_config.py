@@ -27,6 +27,14 @@ class SimpleConfig:
     max_samples: Optional[int] = None  # None = evaluate all samples
     results_dir: str = "results"
     
+    # Delta_z mask: mask tokens with prob < threshold * max_prob (softmax on ICL logits)
+    delta_z_use_mask: bool = True
+    delta_z_mask_threshold: float = 0.1  # mask if prob < 0.1 * max_prob
+    
+    # Delta_z mask configuration (mask low-prob tokens in steering vector)
+    delta_z_use_mask: bool = True  # Default: mask tokens with prob < threshold * max_prob
+    delta_z_mask_threshold: float = 0.1  # Mask if prob < 0.1 * max_prob
+    
     # Dataset configuration
     data_dir: str = "data"
     seed: int = 42  # Default random seed
