@@ -166,7 +166,7 @@ If you use this code or our method, please cite the camera-ready version once it
   booktitle = {Findings of the Association for Computational Linguistics: ACL 2026},
   year = {2026},
   publisher = {Association for Computational Linguistics},
-  url = {https://github.com/Liflysheep/DeCo}
+  url = {https://github.com/szu-tera/DeCoVec.git}
 }
 ```
 
